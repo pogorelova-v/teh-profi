@@ -55,16 +55,65 @@ body{
 .menu{
     background-color: black;
     padding: 10px 15px;
+    position: relative;
 }
 .menu-wrapper{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.menu img{
-    width: 40px;
-}
 .menu span{
     color: white;
     display: block;
+}
+.burger-bar-img{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.burger-bar-img img{
+    width: 40px;
+    position: absolute;
+}
+.burger-bar, .burger-bar-close{
+    transition: 0.5s;
+}
+.scale0{
+    transform: scale(0);
+    transition: 0.5s;
+}
+.burger-bar-content ul{
+    margin: 0;
+}
+.burger-bar-content{
+    position: absolute;
+    background-color: black;
+    transition: 1s;
+    overflow: hidden;
+    max-height: 500px;
+    width: 100%;
+    left: 0;
+    border-top: 1px solid rgb(255, 255, 255);
+}
+.height0{
+    max-height: 0;
+    border: none;
+}
+.burger-bar-content li{
+    margin-bottom: 20px;
+}
+.burger-bar-content li:first-child{
+    margin-top: 20px;
+}
+.burger-bar-content a{
+    text-decoration: none;
+    color: white;
+    transition: all 1s;
+}
+.burger-bar-content a:hover,
+.burger-bar-content a:active{
+    transition: all 1s;
+    color: red;
 }
