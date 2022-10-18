@@ -38,15 +38,23 @@ body{
     color: black;
     font-weight: bold;
     font-size: 22px;
+    animation: number-color 4s infinite;
 }
 .header-addres{
     margin-bottom: 15px;
+}
+
+@keyframes number-color{
+    0% {color: black;}
+    50% {color: red;}
+    100% {color: black;}
+
 }
 /**-------------------------*/
 
 .menu{
     background-color: black;
-    padding: 5px 15px;
+    padding: 10px 15px;
 }
 .menu-wrapper{
     display: flex;
@@ -54,7 +62,7 @@ body{
     justify-content: space-between;
 }
 .menu img{
-    width: 50px;
+    width: 40px;
 }
 .menu span{
     color: white;
