@@ -16,4 +16,6 @@ document.addEventListener( 'click', (e) => {
         burgerBarClose.classList.add('scale0');
         burgerBarContent.classList.add('height0'); 
 	}
-})
+});
+
+
