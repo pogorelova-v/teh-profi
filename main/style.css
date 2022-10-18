@@ -1,0 +1,13 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../assets/icon/background.jpg');
+    background-size: cover;
+}
+.op{
+    border: red solid 1px;
+}
+.container{
+    width: 560px;
+    height: 1000px;
+    margin: 0 auto;
+}
