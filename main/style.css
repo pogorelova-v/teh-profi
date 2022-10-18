@@ -2,12 +2,61 @@ body{
     font-family: 'Roboto', sans-serif;
     background-image: url('../assets/icon/background.jpg');
     background-size: cover;
+    padding-top: 20px;
 }
 .op{
-    border: red solid 1px;
+    border: rgb(9, 255, 0) solid 1px;
 }
 .container{
-    width: 560px;
-    height: 1000px;
+    padding: 0 10px;
     margin: 0 auto;
+}
+/*-------------------------------------------------*/
+
+.header-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-logo{
+    margin-bottom: 15px;
+}
+.header-logo img{
+    width: 100%;
+}
+.header-contacts{
+    margin-bottom: 15px;
+}
+.header-contact-auto-service{
+    margin-bottom: 10px;
+}
+.header-contacts span{
+    margin-right: 15px;
+}
+.header-contacts a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+}
+.header-addres{
+    margin-bottom: 15px;
+}
+/**-------------------------*/
+
+.menu{
+    background-color: black;
+    padding: 5px 15px;
+}
+.menu-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu img{
+    width: 50px;
+}
+.menu span{
+    color: white;
+    display: block;
 }
