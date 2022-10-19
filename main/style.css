@@ -21,18 +21,27 @@ h2{
 /*-------------------------------------------------*/
 
 .header-wrapper{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
     align-items: center;
+    grid-template-areas: 
+    'header-logo'
+    'header-contacts'
+    'header-addres';
+    padding: 0 20px;
+    margin: 0 auto;
 }
 .header-logo{
     margin-bottom: 15px;
+    grid-area: header-logo ;
 }
 .header-logo img{
     width: 100%;
 }
 .header-contacts{
     margin-bottom: 15px;
+    grid-area: header-contacts ;
 }
 .header-contact-auto-service,
 .header-contact-tire-service{
@@ -54,6 +63,7 @@ h2{
 }
 .header-addres{
     margin-bottom: 15px;
+    grid-area:header-addres;
 }
 
 @keyframes number-color{
@@ -146,7 +156,7 @@ h2{
 }
 /*-----------------------------*/
 .carousel{
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 }
 .carousel-item img{
     height: 350px;
@@ -207,13 +217,14 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     position: relative;
     transition: 0.5s;
     cursor: pointer;
     z-index: 1;
 }
 .services-info{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     width: 100%;
     height:80px;
     padding: 20px;
@@ -289,14 +300,14 @@ h2{
     margin: 0 auto;
     max-width: 400px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1% 32% 32% 32% 1%;
     grid-template-rows: repeat(5, 120px);
     grid-template-areas:    
-        'phone arrow-1 clock' 
-        '. . arrow-2'
-        'maintenance arrow-3 driving'
-        'arrow-4 . .'
-        'repair arrow-5 payment';
+        '. phone arrow-1 clock .' 
+        '. . . arrow-2 .'
+        '. maintenance arrow-3 driving .'
+        '. arrow-4 . . .'
+        '. repair arrow-5 payment .';
         justify-items: center;
         align-items: center;
         margin-bottom: 80px;
@@ -448,4 +459,171 @@ footer{
 /*---------------------------------------*/
 
 @media (min-width: 768px) {
+    
+    body{
+        padding-top: 40px;
+    }
+    /*-------------------------------------------------*/
+    
+.header-wrapper{
+    grid-template-columns: 65% 35%;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    'header-logo header-contacts'
+    'header-logo header-contacts'
+    'header-addres header-contacts';
+    padding: 0 10px;
+}
+.header-logo{
+    margin-bottom: 5px;
+    grid-area: header-logo ;
+}
+.header-logo img{
+    width: 100%;
+}
+.header-contacts{
+    margin-bottom: 0;
+    grid-area: header-contacts ;
+}
+.header-contact-auto-service,
+.header-contact-tire-service{
+    margin-bottom: 30px;
+    flex-direction: column;
+}
+.header-contacts a{
+    font-size: 25px;
+}
+.header-addres{
+    grid-area:header-addres;
+}
+
+.carousel-item img{
+    height: 400px;
+}
+
+.services{
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    'suspensionRepair diagnosticsCar diagnosticsCar'
+    'maintenance maintenance steeringRepair'
+    'brakeSystem transmission transmission'
+    'tireService tireService tireFinishing';
+    padding: 0;
+}
+.service{
+    height: 280px;
+}
+#suspensionRepair .service-img-wrapper,
+#steeringRepair .service-img-wrapper,
+#brakeSystem .service-img-wrapper,
+#tireFinishing .service-img-wrapper{
+    width: auto;
+    height: 100%;
+}
+#suspensionRepair img,
+#steeringRepair img,
+#brakeSystem img,
+#tireFinishing img{
+    height: 100%;
+    width: 150%;
+}
+#suspensionRepair{
+    grid-area: suspensionRepair ;
+}
+#diagnosticsCar{
+    grid-area: diagnosticsCar;
+}
+#maintenance{
+    grid-area: maintenance;
+}
+#steeringRepair{
+    grid-area: steeringRepair;
+}
+#tireFinishing{
+    grid-area: brakeSystem;
+}
+#transmission{
+    grid-area: transmission;
+}
+#tireService{
+    grid-area: tireService;
+}
+#tireFinishing{
+    grid-area: tireFinishing;
+}
+
+
+.simply-wrapper{
+    border: black 1px solid;
+    padding-top: 20px;
+}
+.simply li{
+    margin-bottom: 10px;
+}
+.simply li:last-child{
+    margin-bottom: 20px;
+}
+.simply-scheme {
+    max-width: 700px;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: repeat(2, 120px);
+    grid-template-areas:    
+        'phone arrow-1 clock arrow-2 driving' 
+        '. . . . arrow-3'
+        'payment arrow-5 repair arrow-4 maintenance';
+    margin-bottom: 50px;
+}
+.simply-arrow-2 {
+    transform: rotate(270deg);
+}
+.simply-arrow-3 {
+    transform: rotate(0);
+}
+.simply-arrow-4 {
+    transform: rotate(90deg);
+}
+.simply-arrow-5 {
+    transform: rotate(90deg);
+}
+h5{
+    display: flex;
+    justify-content:center ;
+    margin-bottom: 20px;
+    margin-top: 5 0px;
+}
+
+
+footer{
+    padding-top: 50px;
+}
+.footer-info{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    'footer-car footer-timetable'
+    'footer-tire footer-social'
+    'footer-map footer-map';
+    justify-items: center;
+    align-items: center;
+}
+.footer-info span{
+    line-height: 250%;
+}
+.footer-social {
+    grid-area: footer-social;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+.footer-social a{
+    margin-right: 30px;
+}
+.footer-social a:last-child{
+    margin-right: 0;
+}
+
 }
