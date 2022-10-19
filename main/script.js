@@ -19,3 +19,18 @@ document.addEventListener( 'click', (e) => {
 });
 
 
+//-------------------------------------
+
+const serviceItems = document.querySelectorAll('.service');
+const serviceImg = document.querySelectorAll('.service-img');
+
+serviceItems.forEach((element,index) => {
+    element.addEventListener('mouseover', () => {
+        serviceImg[index].classList.add('scale12')
+    })    
+});
+serviceItems.forEach((element,index) => {
+    element.addEventListener('mouseout', () => {
+        serviceImg[index].classList.remove('scale12')
+    })    
+});

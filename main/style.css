@@ -1,7 +1,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     background-image: url('../assets/icon/background.jpg');
-    background-size: cover;
+    background-repeat: repeat;
     padding-top: 20px;
     font-weight: 500;
 }
@@ -127,7 +127,7 @@ h1{
 
 /*-----------------------------*/
 .carousel{
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 .carousel-item img{
     height: 350px;
@@ -146,6 +146,7 @@ h2{
 .hello{
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.5);
+    z-index: -1;
 }
 .hello p span{
     font-weight: 700;
@@ -166,6 +167,7 @@ h2{
     font-size: 18px;
     margin: 20px;
     transition: 0.5s;
+    margin-bottom: 100px;
 }
 .button-hello button:active{
     transform: scale(1.3);
@@ -174,3 +176,63 @@ h2{
     color: black;
 }
 /*--------------------------------------*/
+.services{
+    margin-bottom: 500px;
+}
+.service{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 1;
+}
+.services-info{
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.service-img-wrapper{
+    overflow: hidden;
+    width: 100%;
+}
+.service img{
+    width: 100%;
+    transition: 0.5s;
+}
+.scale12{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+.service::before,
+.service::after{
+    content: '';
+    transition: 0.5s;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    z-index: -1;
+}
+.service::before{
+    right: -4px;
+    top: -4px;
+}
+.service::after{
+    left: -4px;
+    bottom: -4px;
+}
+.service:hover::before,
+.service:hover::after{
+    width: 100%;
+    height: 100%;
+}
+.service:active::before,
+.service:active::after{
+    width: 100%;
+    height: 100%;
+}
