@@ -70,7 +70,6 @@ h2{
 }
 
 /**-------------------------*/
-
 .menu{
     background-color: black;
     padding: 10px 15px;
@@ -139,7 +138,12 @@ h2{
     transition: all 0.5s;
     color: red;
 }
-
+.sticky-menu{
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    width: 100%;
+}
 /*-----------------------------*/
 .carousel{
     margin-bottom: 80px;
@@ -407,6 +411,15 @@ footer{
     width: 70px;
     margin: 20px 0;
 }
+.footer-social a{
+    transition: all 0.5s;
+}
+.footer-social a:hover,
+.footer-social a:active{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
 .footer-map {
     grid-area: footer-map;
     width: 100%;
@@ -426,4 +439,7 @@ footer{
     font-weight: 100;
     font-style: 14px;
     text-decoration: none;
+}
+.autor a:hover{
+    color: red;
 }

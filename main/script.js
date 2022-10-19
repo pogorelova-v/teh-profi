@@ -34,3 +34,17 @@ serviceItems.forEach((element,index) => {
         serviceImg[index].classList.remove('scale12')
     })    
 });
+
+//---------------------------------------------------
+const stickyMenu = document.querySelector('.sticky-menu-contain');
+const scrollHeight = stickyMenu.offsetTop + stickyMenu.clientHeight;
+
+window.addEventListener('scroll', function() {
+    let windowHeight = window.pageYOffset;
+    if(windowHeight > scrollHeight){
+        stickyMenu.classList.add('sticky-menu')
+    } else {
+        stickyMenu.classList.remove('sticky-menu')
+    }
+  });
+
