@@ -34,8 +34,12 @@ h2{
 .header-contacts{
     margin-bottom: 15px;
 }
-.header-contact-auto-service{
+.header-contact-auto-service,
+.header-contact-tire-service{
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .header-contacts span{
     margin-right: 15px;
@@ -46,6 +50,7 @@ h2{
     font-weight: bold;
     font-size: 22px;
     animation: number-color 4s infinite;
+    transition: 0.5s all;
 }
 .header-addres{
     margin-bottom: 15px;
@@ -55,8 +60,15 @@ h2{
     0% {color: black;}
     50% {color: red;}
     100% {color: black;}
-
 }
+.header-contact-auto-service a:hover,
+.header-contact-tire-service a:hover{
+    transform: scale(1.2);
+    transition: all 0.5s;
+    margin-left: 10px;
+    display: block;
+}
+
 /**-------------------------*/
 
 .menu{
@@ -264,14 +276,14 @@ h2{
     font-weight: 900;
 }
 .simply-elem{
-    width: 110px;
+    width: 90px;
 }
 .simply-arrow{
     width: 40px;
 }
 .simply-scheme {
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 400px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 120px);
@@ -363,6 +375,14 @@ footer{
     text-decoration: none;
     font-size: 25px;
     animation: number-color-footer 3s infinite;
+    transition: 0.5s all;
+}
+.footer-car-service a:hover,
+.footer-tire-service a:hover,
+.footer-car-service a:active,
+.footer-tire-service a:active{
+    transform: scale(1.2);
+    transition: 0.5s all;
 }
 
 @keyframes number-color-footer{
