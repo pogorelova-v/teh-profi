@@ -72,7 +72,7 @@ h2{
 /**-------------------------*/
 .menu{
     background-color: black;
-    padding: 10px 15px;
+    padding: 5px 15px;
     position: relative;
 }
 .menu-wrapper{
@@ -442,4 +442,10 @@ footer{
 }
 .autor a:hover{
     color: red;
+}
+
+
+/*---------------------------------------*/
+
+@media (min-width: 768px) {
 }

@@ -9,9 +9,8 @@ burgerBar.addEventListener('click', () => {
 });
 
 document.addEventListener( 'click', (e) => {
-	const withinBoundaries = e.composedPath().includes(burgerBarContent);
 	const withinBoundariesIx = e.composedPath().includes(burgerBar);
-	if ( !withinBoundaries && !withinBoundariesIx ) {
+	if ( !withinBoundariesIx ) {
         burgerBar.classList.remove('scale0');
         burgerBarClose.classList.add('scale0');
         burgerBarContent.classList.add('height0'); 
@@ -37,7 +36,7 @@ serviceItems.forEach((element,index) => {
 
 //---------------------------------------------------
 const stickyMenu = document.querySelector('.sticky-menu-contain');
-const scrollHeight = stickyMenu.offsetTop + stickyMenu.clientHeight;
+const scrollHeight = stickyMenu.offsetTop;
 
 window.addEventListener('scroll', function() {
     let windowHeight = window.pageYOffset;
