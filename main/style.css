@@ -18,6 +18,10 @@ h1{
 h2{
     margin-bottom: 40px;
 }
+.main-menu,
+.hello-person{
+    display: none;
+}
 /*-------------------------------------------------*/
 
 .header-wrapper{
@@ -175,7 +179,7 @@ h2{
 .hello{
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.5);
-    z-index: -1;
+    z-index: -1;    
 }
 .hello p span{
     font-weight: 700;
@@ -463,8 +467,6 @@ footer{
     body{
         padding-top: 40px;
     }
-    /*-------------------------------------------------*/
-    
 .header-wrapper{
     grid-template-columns: 65% 35%;
     justify-items: center;
@@ -498,14 +500,17 @@ footer{
     grid-area:header-addres;
 }
 
+
+.hello-wrapper{
+    font-weight: 400;
+}
+
 .carousel-item img{
     height: 400px;
 }
 
 .services{
     grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
     grid-template-areas: 
     'suspensionRepair diagnosticsCar diagnosticsCar'
     'maintenance maintenance steeringRepair'
@@ -559,6 +564,7 @@ footer{
 .simply-wrapper{
     border: black 1px solid;
     padding-top: 20px;
+    margin-bottom: 60px;
 }
 .simply li{
     margin-bottom: 10px;
@@ -610,14 +616,17 @@ footer{
     justify-items: center;
     align-items: center;
 }
-.footer-info span{
-    line-height: 250%;
+.footer-car-service span{
+    line-height: 150%;
 }
 .footer-social {
     grid-area: footer-social;
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;
+}
+.footer-social img{
+    width: 50px;
 }
 .footer-social a{
     margin-right: 30px;
@@ -626,4 +635,169 @@ footer{
     margin-right: 0;
 }
 
+.autor{
+    font-size: 14px;
+}
+
+}
+
+@media (min-width: 1100px){
+
+.header-wrapper{
+    align-items: end;
+    grid-template-areas: 
+    'header-logo header-contacts'
+    'header-logo header-contacts'
+    'header-logo header-addres';
+}
+.header-contact-auto-service,
+.header-contact-tire-service{
+    margin-bottom: 10px;
+}
+
+    .burger-bar-content,
+    .burger-bar-img{
+        display: none;
+    }
+
+
+
+    .main-menu,
+    .hello-person{
+        display: block;
+    }
+    .main-menu ul{        
+        display: flex;
+        margin: 0;
+    }
+    .main-menu ul li{
+        list-style: none;
+        margin-right: 20px;
+    }
+    .main-menu ul li a{
+        color: white;
+        text-decoration: none;
+    }
+    .main-menu a:hover,
+    .main-menu a:active{
+        transition: all 0.5s;
+        color: red;
+    }
+
+    .hello-wrapper{
+        display: flex;
+        align-items: center;
+    }
+    .hello-person{
+        margin-right: 50px;
+    }
+    .hello-person img{
+        width: 100%;
+        border-radius: 5px;
+        
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.5);
+    }
+
+
+    .services{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        'suspensionRepair diagnosticsCar maintenance maintenance'
+        'steeringRepair steeringRepair brakeSystem transmission'
+        'tireService tireService tireFinishing tireFinishing';
+        padding: 0;
+    }
+    .service{
+        height: 220px;
+    }
+    #suspensionRepair .service-img-wrapper,
+    #diagnosticsCar .service-img-wrapper,
+    #brakeSystem .service-img-wrapper,
+    #transmission .service-img-wrapper{
+        width: auto;
+        height: 100%;
+    }
+    #suspensionRepair img,
+    #diagnosticsCar img,
+    #brakeSystem img,
+    #transmission img{
+        height: 100%;
+        width: 150%;
+    }
+
+    #steeringRepair .service-img-wrapper,
+    #tireFinishing .service-img-wrapper{
+        width: 100%;
+        height: auto;
+    }
+    #steeringRepair img,
+    #tireFinishing img{
+        height: auto;
+        width: 100%;
+    }
+
+    .simply-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .simpli-info{
+        width: 60%;
+    }
+    .simply-scheme {
+        width: 35%;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 120px 50px 120px;
+        grid-template-areas:    
+            'phone arrow-1 clock arrow-2 driving' 
+            '. . . . arrow-3'
+            'payment arrow-5 repair arrow-4 maintenance';
+    }
+    .simply-elem{
+        width: 50px;
+    }
+    .simply-arrow{
+        width: 20px;
+    }
+
+
+    .footer-info{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 40% 60%;
+        grid-template-areas:
+        'footer-car footer-map'
+        'footer-tire footer-map'
+        'footer-timetable footer-map'
+        'footer-social footer-map';
+    }
+    .footer-social {
+        margin-bottom: 0px;
+    }
+}
+@media (min-width: 1400px){
+    .services-wrapper{
+        width: 1100px;
+    }
+}
+@media (min-width: 1600px){
+    .header-contacts span{
+        font-size: 24px;
+    }
+    .header-addres{
+        font-size: 20px;
+    }
+    .header-contacts a{
+        font-size: 35px;
+    }
+    .footer-info{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 15% 15% 70%;
+        grid-template-areas:
+        'footer-car footer-tire footer-map'
+        'footer-timetable footer-social footer-map';
+    }
+    
 }
