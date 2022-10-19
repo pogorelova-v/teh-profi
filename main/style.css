@@ -15,6 +15,9 @@ body{
 h1{
     display: none;
 }
+h2{
+    margin-bottom: 40px;
+}
 /*-------------------------------------------------*/
 
 .header-wrapper{
@@ -241,3 +244,79 @@ h2{
     height: 100%;
 }
 
+/*---------------------------------*/
+
+.simply-wrapper{
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+.simply li span{
+    font-weight: 700;
+}
+.simply-slogan{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.simply-slogan span{
+    font-weight: 900;
+}
+.simply-elem{
+    width: 110px;
+}
+.simply-arrow{
+    width: 40px;
+}
+.simply-scheme {
+    margin: 0 auto;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 120px);
+    grid-template-areas:    
+        'phone arrow-1 clock' 
+        '. . arrow-2'
+        'maintenance arrow-3 driving'
+        'arrow-4 . .'
+        'repair arrow-5 payment';
+        justify-items: center;
+        align-items: center;
+}
+.simply-phone {
+    grid-area: phone;
+}
+.simply-arrow-1 {
+    grid-area: arrow-1;
+    transform: rotate(270deg);
+}
+.simply-clock {
+    grid-area: clock;
+}
+.simply-arrow-2 {
+    grid-area: arrow-2;
+}
+.simple-driving {
+    grid-area: driving;
+}
+.simply-arrow-3 {
+    grid-area: arrow-3;
+    transform: rotate(90deg);
+}
+.simple-maintenance {
+    grid-area: maintenance;
+}
+.simply-arrow-4 {
+    grid-area: arrow-4;
+}
+.simply-repair {
+    grid-area: repair;
+}
+.simply-arrow-5 {
+    grid-area: arrow-5;
+    transform: rotate(270deg);
+}
+.simply-payment {
+    grid-area: payment;
+}
