@@ -21,6 +21,7 @@ h2{
 .main-menu,
 .hello-person{
     display: none;
+    z-index: 5;
 }
 /*-------------------------------------------------*/
 
@@ -88,6 +89,7 @@ h2{
     background-color: black;
     padding: 5px 15px;
     position: relative;
+    z-index: 5;
 }
 .menu-wrapper{
     display: flex;
@@ -98,6 +100,7 @@ h2{
     color: white;
     display: block;
     letter-spacing: 1px;
+    white-space: nowrap
 }
 .burger-bar-img{
     width: 40px;

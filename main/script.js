@@ -10,12 +10,21 @@ burgerBar.addEventListener('click', () => {
 
 document.addEventListener( 'click', (e) => {
 	const withinBoundariesIx = e.composedPath().includes(burgerBar);
-	if ( !withinBoundariesIx ) {
+	const withinBoundaries = e.composedPath().includes(servicesMainMenu);
+	if ( !withinBoundariesIx && !withinBoundaries) {
         burgerBar.classList.remove('scale0');
         burgerBarClose.classList.add('scale0');
         burgerBarContent.classList.add('height0'); 
 	}
 });
+
+//-----------для второстип страниц
+const servicesMainMenu = document.querySelector('.services-main-menu');
+
+servicesMainMenu.addEventListener('click', () => {
+    burgerBarContent.classList.toggle('height0');    
+});
+
 
 
 //-------------------------------------
