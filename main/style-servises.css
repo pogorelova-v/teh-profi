@@ -1,0 +1,14 @@
+.btn-services-page{
+margin: 20px;
+}
+.dd-button:first-child{
+    margin: 10px;
+}
+.main-menu ul{        
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+}
+.main-menu ul li{
+    margin: 5px 20px 5px 0;
+}

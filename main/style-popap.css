@@ -1,20 +1,20 @@
- 
 .form {
     background-color: white;
-    border-radius: 10px;
     border: solid 2px rgb(0, 0, 0);
     padding: 20px 10px;
-    width: 400px;
+    min-width: 300px;
+    max-width: 450px;
     margin: 0 auto;
     position: fixed;
-    top: 25%;
+    top: 10vh;
     transition: all 1s;
     z-index: 10;
-    transform: translateX(-700px);
+    transform: translateX(-768px);
 }
 .form-active{
     transition: all 1s;
     transform: translateX(0);
+    box-shadow: 0 0 500px 200px black;
 }
 .close-popup{
     position: absolute;
@@ -180,5 +180,21 @@ textarea::placeholder{
 }
 .checkbox__inpute._error::after{
     border: solid 2px red;
+}
+
+
+.detailed-data{
+    cursor: pointer;
+}
+  /*-----------------------------*/
+
+
+@media (min-width: 1000px){
+    .form {
+        transform: translateX(-1500px);
+    }
+    .form-active{
+        transform: translateX(0);
+    }
 }
 

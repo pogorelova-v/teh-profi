@@ -50,13 +50,13 @@ window.addEventListener('scroll', function() {
   //------------------------------------------------------------
 
 const detailedData = document.querySelector('.detailed-data-span');
+const detailedDataWrap = document.querySelector('.detailed-data');
 const detailedDataImg = document.querySelector('.detailed-data-img');
 const detailedDataContent = document.querySelector('.detailed-data-content');
 
-detailedData.textContent = 'Развернуть подробные данные';
 let openData = detailedData.textContent;
 
-detailedData.addEventListener('click', () => {
+detailedDataWrap.addEventListener('click', () => {
     let textC = detailedData.textContent;
         if(textC === 'Развернуть подробные данные'){
             detailedData.textContent = 'Свернуть подробные данные';
@@ -69,7 +69,6 @@ detailedData.addEventListener('click', () => {
             detailedDataImg.classList.remove('detailed-data-active-img')
             detailedDataContent.classList.remove('detailed-data-content-active')
         }
-        console.log(openData);
 });
 
 //--------------------------------------------------------------
@@ -95,3 +94,5 @@ document.addEventListener( 'click', (e) => {
         formPopap.classList.remove('form-active')
     }
 })
+
+//---------------------------------------------
