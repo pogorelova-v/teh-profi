@@ -47,3 +47,51 @@ window.addEventListener('scroll', function() {
     }
   });
 
+  //------------------------------------------------------------
+
+const detailedData = document.querySelector('.detailed-data-span');
+const detailedDataImg = document.querySelector('.detailed-data-img');
+const detailedDataContent = document.querySelector('.detailed-data-content');
+
+detailedData.textContent = 'Развернуть подробные данные';
+let openData = detailedData.textContent;
+
+detailedData.addEventListener('click', () => {
+    let textC = detailedData.textContent;
+        if(textC === 'Развернуть подробные данные'){
+            detailedData.textContent = 'Свернуть подробные данные';
+            openData = 'Свернуть подробные данные';
+            detailedDataImg.classList.add('detailed-data-active-img')
+            detailedDataContent.classList.add('detailed-data-content-active')
+        } else {
+            detailedData.textContent = 'Развернуть подробные данные';
+            openData = 'Развернуть подробные данные';
+            detailedDataImg.classList.remove('detailed-data-active-img')
+            detailedDataContent.classList.remove('detailed-data-content-active')
+        }
+        console.log(openData);
+});
+
+//--------------------------------------------------------------
+
+const formPopap = document.querySelector('.form');
+const buttonFormPopup = document.querySelector('.button-formPopup');
+const closePopup = document.querySelector('.close-popup');
+const formButton = document.querySelector('.form__button');
+
+buttonFormPopup.addEventListener('click', () => {
+    formPopap.classList.add('form-active')
+});
+
+document.addEventListener( 'click', (e) => {
+	const withinBoundaries = e.composedPath().includes(formPopap);
+	const withinBoundariesBut = e.composedPath().includes(buttonFormPopup);
+	const withinBoundariesIx = e.composedPath().includes(closePopup);
+	const withinBoundariesFB = e.composedPath().includes(formButton);
+ 
+	if ( ! withinBoundaries && ! withinBoundariesBut) {
+		formPopap.classList.remove('form-active')
+	} else if (withinBoundariesIx || withinBoundariesFB){
+        formPopap.classList.remove('form-active')
+    }
+})

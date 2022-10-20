@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="main/bootstrap.css">
     <link rel="stylesheet" href="main/normalize.css">
     <link rel="stylesheet" href="main/style.css">
+    <link rel="stylesheet" href="main/style-popap.css">
     <title>ТехПрофи</title>
 </head>
 <body>
@@ -185,7 +186,62 @@
           </div>            
             </div>
             <div class="button-hello">
-              <button class="dd-button">Записаться на ремонт</button>
+              <button class="dd-button button-formPopup">Записаться на ремонт</button>
+
+              <div class="form">
+                <form action="#" id="form" class="form__body">
+                  <div class="close-popup">&#10008;</div>
+                  <h4 class="form__title">Форма обратной связи </h4>
+                  <p>Оставьте свои контактные данные 
+                    мы перезвоним Вам в ближайшее время</p>
+          
+                  <div class="form__item">
+                    <label for="formName" class="form__label"></label>
+                    <input id="formName" type="text" name="name" class="form__inpute _req" placeholder="Ваше имя *">
+                  </div>
+          
+                  <div class="form__item">
+                   <label for="formTell" class="form__label"></label>
+                   <input id="formTell" type="number" name="tell" class="form__inpute _req" placeholder="Контактный номер *">
+                 </div>
+  
+                 <div class="detailed-data">
+                  <span class="detailed-data-span">Развернуть подробные данные </span>
+                  <img class="detailed-data-img" src="assets/icon/simply-arrow.png" alt="detailed-data">
+                </div>
+                 
+                <div class="detailed-data-content">
+                  <div class="form__item">
+                    <label for="formMessage" class="form__label"></label>
+                    <textarea name="message" id="formMessage" class="form__inpute" placeholder="Марка и модель авто"></textarea>
+                  </div>
+   
+                  <div class="form__item">
+                   <label for="formYear" class="form__label"></label>
+                   <input id="formYear" type="number" name="year" class="form__inpute" placeholder="Год выпуска">
+                 </div>
+                  
+                 <div class="check-box-wrapper">
+                   <label for="formRepair" class="checkbox__label">Ремонт в снятом виде </label>
+                 <input type="checkbox" name="repair" class="checkbox__inpute" id="formRepair" >
+                 </div>
+   
+                 <div class="check-box-wrapper">
+                   <label for="formConsumables" class="checkbox__label">Свои расходники</label>
+                  <input type="checkbox" name="consumables" class="checkbox__inpute" id="formConsumables" >
+                 </div>
+                </div>
+                
+                <button class="form__button" type="submit" >отправить</button>
+                
+                <div class="check-box-wrapper-agreem">
+                  <input type="checkbox" name="agreement" class="checkbox__inpute _req" id="formAgreement" checked>
+                   <label for="formAgreement" class="checkbox__label">Согласен на обработку персональных данных</label>
+                </div>
+                
+                </form>
+              </div>
+
           </div>
           </div>
 
