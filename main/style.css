@@ -309,9 +309,13 @@ h2{
 /*---------------------------------*/
 
 .simply-wrapper{
-    background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.5);
     z-index: -1;
+}
+.simply li,
+.simply-slogan,
+.simply-scheme{
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.4);
 }
 .simply li span{
     font-weight: 700;
@@ -325,18 +329,19 @@ h2{
 .simply-slogan span{
     font-weight: 900;
 }
+
 .simply-elem{
-    width: 90px;
+    width: 50px;
 }
 .simply-arrow{
-    width: 40px;
+    width: 20px;
 }
 .simply-scheme {
     margin: 0 auto;
-    max-width: 400px;
+    width: 60%;
     display: grid;
     grid-template-columns: 1% 32% 32% 32% 1%;
-    grid-template-rows: repeat(5, 120px);
+    grid-template-rows: repeat(5, 70px);
     grid-template-areas:    
         '. phone arrow-1 clock .' 
         '. . . arrow-2 .'
@@ -622,9 +627,8 @@ footer{
     margin-bottom: 20px;
 }
 .simply-scheme {
-    max-width: 700px;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: repeat(2, 120px);
+    grid-template-rows: repeat(2, 80px);
     grid-template-areas:    
         'phone arrow-1 clock arrow-2 driving' 
         '. . . . arrow-3'
@@ -735,7 +739,7 @@ footer{
     .burger-bar-content,
     .burger-bar-img{
         display: none;
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .main-menu,
@@ -789,19 +793,12 @@ footer{
     .simply-scheme {
         width: 35%;
         grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-rows: 120px 50px 120px;
+        grid-template-rows: 80px 40px 80px;
         grid-template-areas:    
             'phone arrow-1 clock arrow-2 driving' 
             '. . . . arrow-3'
             'payment arrow-5 repair arrow-4 maintenance';
     }
-    .simply-elem{
-        width: 50px;
-    }
-    .simply-arrow{
-        width: 20px;
-    }
-
 
     .footer-info{
         display: grid;
