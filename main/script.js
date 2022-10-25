@@ -19,6 +19,7 @@ document.addEventListener( 'click', (e) => {
 });
 
 //-----------для второстип страниц
+
 const servicesMainMenu = document.querySelector('.services-main-menu');
 
 servicesMainMenu.addEventListener('click', () => {
@@ -46,6 +47,8 @@ serviceItems.forEach((element,index) => {
 //---------------------------------------------------
 const stickyMenu = document.querySelector('.sticky-menu-contain');
 const scrollHeight = stickyMenu.offsetTop;
+
+console.log(stickyMenu.offsetTop);
 
 window.addEventListener('scroll', function() {
     let windowHeight = window.pageYOffset;
