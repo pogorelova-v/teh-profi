@@ -87,8 +87,7 @@ h2{
     white-space: nowrap;
     margin-right: 5px;
 }
-.header-addres a:hover,
-.header-addres a:active{
+.header-addres a:hover{
     color: red;
 }
 
