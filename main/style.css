@@ -517,8 +517,15 @@ footer{
     grid-template-areas: 
     'header-logo header-contacts'
     'header-logo header-contacts'
-    'header-addres header-contacts';
+    'header-logo header-contacts'
+    'header-addres header-timetable';
     padding: 0 10px;
+}
+.header-timetable{
+    grid-area: header-timetable;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 .header-logo{
     margin-bottom: 5px;
@@ -532,8 +539,9 @@ footer{
     grid-area: header-contacts ;
 }
 .header-contact-auto-service,
-.header-contact-tire-service{
-    margin-bottom: 30px;
+.header-contact-tire-service,
+.header-timetable{
+    margin-bottom: 20px;
     flex-direction: column;
 }
 .header-contacts a{
@@ -716,6 +724,7 @@ footer{
     grid-template-areas: 
     'header-logo header-contacts'
     'header-logo header-contacts'
+    'header-logo header-timetable'
     'header-logo header-addres';
 }
 .header-contact-auto-service,
@@ -732,12 +741,12 @@ footer{
     .main-menu,
     .hello-person{
         display: block;
-        font-size: 22px;
         padding: 5px 0;
     }
     .main-menu ul{        
         display: flex;
         margin: 0;
+        font-size: 20px;
     }
     .main-menu ul li{
         list-style: none;
@@ -820,6 +829,9 @@ footer{
     }
     .services-wrapper{
         width: 1100px;
+    }
+    .header-timetable{
+        font-size: 20px;
     }
 
 }
