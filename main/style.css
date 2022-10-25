@@ -53,7 +53,8 @@ h2{
     letter-spacing: 1px;
 }
 .header-contact-auto-service,
-.header-contact-tire-service{
+.header-contact-tire-service,
+.header-timetable{
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
@@ -61,6 +62,9 @@ h2{
 }
 .header-contacts span{
     margin-right: 15px;
+}
+.header-timetable{
+    flex-direction: column;
 }
 .header-contacts a{
     text-decoration: none;
@@ -472,7 +476,7 @@ footer{
 }
 .footer-social img{
     width: 70px;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .footer-social a{
     transition: all 0.5s;
@@ -528,9 +532,6 @@ footer{
 }
 .header-timetable{
     grid-area: header-timetable;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
 }
 .header-logo{
     margin-bottom: 5px;
