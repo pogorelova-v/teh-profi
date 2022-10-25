@@ -108,3 +108,14 @@ document.addEventListener( 'click', (e) => {
 })
 
 //---------------------------------------------
+
+
+/*
+let fixedCar = document.getElementById('fixed-car');
+
+fixedCar.addEventListener('click', () => {
+    let pos = 0;
+    let step = setInterval(frame, 10)
+    
+})
+ */

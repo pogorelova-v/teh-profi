@@ -5,6 +5,62 @@ body{
     padding-top: 20px;
     font-weight: 500;
 }
+.fixed-call{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    bottom: 60px;
+    right: 90px;
+    z-index: 20;
+}
+.fixed-call img{
+    width: 40px;
+}
+.fixed-call a{
+    display: block;
+    border-radius: 50%;
+    padding: 10px;
+    background: linear-gradient(-45deg,  #1a6e00, #00ff40, #00ffbf, #40d158);
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.fixed-car {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 20;
+    animation: climb-up 2s ease infinite;
+}
+.fixed-car img{
+    width: 60px;
+}
+.fixed-car a{
+    display: block;
+}
+
+@keyframes climb-up {
+    0% {
+        bottom: 10px;
+    }
+    50% {
+        bottom: 15px;
+    }
+    100% {
+        bottom: 10px;
+    }
+}
+
 .op{
     border: rgb(9, 255, 0) solid 1px;
 }
@@ -74,6 +130,7 @@ h2{
     animation: number-color 4s infinite;
     transition: 0.5s all;
 }
+
 .header-addres{
     margin-bottom: 15px;
     grid-area:header-addres;
@@ -125,6 +182,15 @@ h2{
     display: block;
     letter-spacing: 1px;
     white-space: nowrap
+}
+.main-menu-sale{
+    animation: sale-color 3s infinite;
+    transition: 0.5s all;
+}
+@keyframes sale-color{
+    0% {color: rgb(255, 255, 255);}
+    50% {color: red;}
+    100% {color: rgb(255, 255, 255);}
 }
 .burger-bar-img{
     width: 40px;
