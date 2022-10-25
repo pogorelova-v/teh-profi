@@ -688,11 +688,14 @@ footer{
     .burger-bar-content,
     .burger-bar-img{
         display: none;
+        font-size: 22px;
     }
 
     .main-menu,
     .hello-person{
         display: block;
+        font-size: 22px;
+        padding: 5px 0;
     }
     .main-menu ul{        
         display: flex;
