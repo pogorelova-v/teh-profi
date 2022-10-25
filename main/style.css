@@ -48,6 +48,10 @@ h2{
     margin-bottom: 15px;
     grid-area: header-contacts ;
 }
+.header-contacts a{
+    font-family: 'Passion One', cursive;
+    letter-spacing: 1px;
+}
 .header-contact-auto-service,
 .header-contact-tire-service{
     margin-bottom: 10px;
@@ -397,6 +401,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .footer-car-service a,
 .footer-tire-service a{
@@ -405,6 +410,8 @@ footer{
     font-size: 25px;
     animation: number-color-footer 3s infinite;
     transition: 0.5s all;
+    font-family: 'Passion One', cursive;
+    letter-spacing: 1px;
 }
 .footer-car-service a:hover,
 .footer-tire-service a:hover,
@@ -810,6 +817,9 @@ footer{
 @media (min-width: 1400px){
     .services-wrapper{
         width: 1100px;
+    }
+    .header-contacts a{
+        font-size: 30px;
     }
 }
 @media (min-width: 1600px){
