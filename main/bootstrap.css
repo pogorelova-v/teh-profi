@@ -5984,8 +5984,9 @@ textarea.form-control-lg {
 
 .carousel-caption {
   position: absolute;
-  top: 50%;
-  padding: 10px 20px;
+  right: 15%;
+  bottom: 0;
+  left: 15%;
   color: #fff;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.5);

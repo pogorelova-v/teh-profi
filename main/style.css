@@ -258,6 +258,19 @@ body{
     text-decoration: none;
     color: white;
 }
+.carousel-caption{
+    margin-bottom: 10px;
+}
+.carousel-caption h2{
+    margin-bottom: 10px;
+}
+.carousel-caption a span{
+    font-size: 14px;
+    text-transform: lowercase;
+}
+.carousel-caption a img{
+    width: 20px;
+}
 /*-------------------------------------*/
 h2{
    text-align: center;
@@ -658,6 +671,13 @@ footer{
     grid-area:header-addres;
 }
 
+.carousel-caption {
+    position: absolute;
+    right: 25%;
+    bottom: auto;
+    top: 50%;
+    left: 25%;
+  }
 .carousel-item img{
     height: 100%;
 }
