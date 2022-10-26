@@ -1,4 +1,9 @@
 /*------------------------service---------------------------*/
+h1,
+h5{
+    width: 100%;
+    text-align: center;
+}
 .btn-services-page{
 margin: 20px;
 }
@@ -114,4 +119,28 @@ margin: 20px;
     .sale-item{
         width: 45%;
     }
+}
+
+/*------------------------------.advantages-----------------------*/
+
+.advantages-carousel-control{
+    width: 40px;
+}
+.advantages-info{
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.4);
+}
+.advantages-info span{
+    font-weight: 700;
+}
+.advantages-info .h5-bold{
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+}
+.advantages-info p{
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
 }
