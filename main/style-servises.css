@@ -32,7 +32,8 @@ margin: 20px;
     width: 0;
 }
 .services-description p{
-    margin: 0 0 5px 0;
+    padding: 0 0 5px 5px;
+    border-left: 2px solid #000;
 }
 .services-description-wiki{
     text-align: end;
@@ -125,6 +126,9 @@ table.services-price-inside-table tr:last-child{
     }
 }
 @media (min-width: 1200px){
+    .services-description{
+        padding: 0 30px;
+    }
     .services-price table{
         width: 80%;
     }
