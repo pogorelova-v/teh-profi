@@ -1,7 +1,7 @@
 .btn-services-page{
 margin: 20px;
 }
-.dd-button:first-child{
+.button-formPopup{
     margin: 10px;
 }
 .main-menu ul li{
@@ -25,6 +25,7 @@ margin: 20px;
 .carousel-control-next{
     width: 0;
 }
+
 @media (min-width: 1000px){
     .burger-bar-content{
         display: block;

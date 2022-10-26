@@ -17,13 +17,12 @@
     <link rel="icon" href="../assets/icon/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style-popap.css">
-    <link rel="stylesheet" href="style-servises.css">
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../main/bootstrap.css">
+    <link rel="stylesheet" href="../main/normalize.css">
+    <link rel="stylesheet" href="../main/style.css">
+    <link rel="stylesheet" href="../main/style-popap.css">
+    <link rel="stylesheet" href="../main/style-servises.css">
     <title>ТехПрофи</title>
 </head>
 <body>
@@ -34,7 +33,7 @@
   </div>
   <div class="fixed-car" id="fixed-car">
     <a href="#h1">
-      <img src="../assets/icon/car.png" alt="car">
+      <img src="../assets/icon/car.png" alt="call">
     </a>
   </div>
     <header>
@@ -57,8 +56,8 @@
               <span>ПН - ПТ  9:00 - 19:00</span>   <span>СБ, ВС по согласованию</span>
             </div>
             <div class="header-addres">
-              <a href="#map-anchor">Нижний Новгород Московское шоссе 85в </a>
-              <img src="../assets/icon/location.png" alt="location">
+                <a href="#map-anchor">Нижний Новгород Московское шоссе 85в </a>
+                <img src="../assets/icon/location.png" alt="location">
             </div>
         </div>
 
@@ -89,7 +88,7 @@
                   <li><a href="tireService.html">Шиномонтаж</a></li>
                   <li><a href="tireFinishing.html">Дошиповка шин</a></li>
                   <li class="font-size-0"> - </li>
-                  <li><a href="#"  class="main-menu-sale">Акции</a></li>
+                  <li><a href="../main/sale.html"  class="main-menu-sale">Акции</a></li>
                 </ul>
             </div>
         </div>
@@ -184,35 +183,40 @@
     
             </div>
             <div class="button-hello">
-                <a href="tel:+79616327103">
-                <button class="dd-button">Позвонить!</button>
-                </a>
+                <a href="tel:+79616327103" class="dd-button">Позвонить!</a>
               </div>
         </div>
     </main>
 
     <footer>
-        <div class="footer-info" id="footer-info">
-           <div class="footer-car-service">
-             <span>Автосервис</span> <a target="_blank" href="tel:+79616327103">8-961-632-71-03</a>
-           </div>
-           <div class="footer-tire-service">
-             <span>Шиномонтаж</span> <a target="_blank" href="tel:+79616327103">8-961-632-71-03</a>
-           </div>
-        <div class="footer-timetable"><span>ПН - ПТ  9:00 - 19:00</span>  <span>СБ, ВС по согласованию</span> <a href="mailto:addres-addres@mail.ru">addres-addres@mail.ru</a></div>
-        <div class="footer-social">
-           <a target="_blank" href="https://t.me/+79616327103"> <img src="../assets/icon/telegram.png" alt="telegram"></a>
-           <a target="_blank" href="https://wa.me/79616327103"> <img src="../assets/icon/whatsapp.png" alt="whatsapp"></a>
-           <a target="_blank" href="viber://chat?number=%2B79616327103"> <img src="../assets/icon/viber.png" alt="viber"></a>
-        </div>
-        <div class="footer-map" id="map-anchor">
-         <iframe src="https://yandex.ru/map-widget/v1/-/CCUZBThUXA" allowfullscreen="true" ></iframe>
-        </div>
-        </div>
-        <div class="autor"><a target="_blank" href="mailto:developer.don.dragon@gmail.com">2022 © developer.don.dragon@gmail.com</a></div>
-     </footer>
+      <div class="footer-info" id="footer-info"> 
 
-    <script src="bootstrap.js"></script>
-    <script src="script.js"></script>
+         <div class="footer-car-service">
+           <span>Автосервис</span> <a target="_blank" href="tel:+79616327103">8-961-632-71-03</a>
+         </div>
+         <div class="footer-tire-service">
+           <span>Шиномонтаж</span> <a target="_blank" href="tel:+79616327103">8-961-632-71-03</a>
+         </div>
+
+        <div class="footer-timetable"><span>ПН - ПТ  9:00 - 19:00</span>  <span>СБ, ВС по согласованию</span> 
+          <a href="mailto:addres-addres@mail.ru">addres-addres@mail.ru</a>
+       </div>
+
+      <div class="footer-social">
+         <a target="_blank" href="https://t.me/+79616327103"> <img src="../assets/icon/telegram.png" alt="telegram"></a>
+         <a target="_blank" href="https://wa.me/79616327103"> <img src="../assets/icon/whatsapp.png" alt="whatsapp"></a>
+         <a target="_blank" href="viber://chat?number=%2B79616327103"> <img src="../assets/icon/viber.png" alt="viber"></a>
+         <a target="_blank" href="https://vk.com"> <img src="../assets/icon/vk.png" alt="vk"></a>
+      </div>
+
+      <div class="footer-map" id="map-anchor">
+       <iframe src="https://yandex.ru/map-widget/v1/-/CCUZBThUXA" allowfullscreen="true" ></iframe>
+      </div>
+      </div>
+      <div class="autor"><a target="_blank" href="mailto:developer.don.dragon@gmail.com">2022 © developer.don.dragon@gmail.com</a></div>
+   </footer>
+
+   <script src="../main/bootstrap.js"></script>
+   <script src="../main/script.js"></script>
 </body>
 </html>

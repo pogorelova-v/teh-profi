@@ -194,7 +194,15 @@ textarea::placeholder{
 
 @media (min-width: 1000px){
     .form {
-        transform: translateX(-1500px);
+        transform: translateX(-1000px);
+    }
+    .form-active{
+        transform: translateX(0);
+    }
+}
+@media (min-width: 1400px){
+    .form {
+        transform: translateX(-1900px);
     }
     .form-active{
         transform: translateX(0);
