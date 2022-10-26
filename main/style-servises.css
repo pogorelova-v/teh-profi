@@ -67,6 +67,7 @@ margin: 20px;
 }
 .services-price{    
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -103,9 +104,6 @@ margin: 20px;
 .services-price tfoot{
     font-size: 14px;
     font-weight: 400;
-}
-.space-to-table{
-    height: 20px;
 }
 table.services-price-inside-table tr{
     border-bottom: solid 1px rgba(0, 0, 0, 0.5);
