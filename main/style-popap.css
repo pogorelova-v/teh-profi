@@ -107,7 +107,10 @@ textarea::placeholder{
 }
 .checkbox__inpute,
 .checkbox__inpute._req{
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
+    outline: none;
 }
 .checkbox__inpute::after{
     content: '';

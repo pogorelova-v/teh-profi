@@ -91,6 +91,10 @@ h2{
     'header-addres';
     padding: 0 20px;
     margin: 0 auto;
+    
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.4);
+    z-index: -1;
 }
 .header-logo{
     margin-bottom: 15px;
@@ -104,7 +108,7 @@ h2{
     grid-area: header-contacts ;
 }
 .header-contacts a{
-    font-family: 'Passion One', cursive;
+    font-family: 'Passion One', 'Russo One', sans-serif;
     letter-spacing: 1px;
 }
 .header-contact-auto-service,
@@ -115,8 +119,10 @@ h2{
     justify-content: center;
     align-items: center;
 }
-.header-contacts span{
+.header-contacts span,
+.header-timetable{
     margin-right: 15px;
+    font-family: 'Russo One', sans-serif;    
 }
 .header-timetable{
     flex-direction: column;
@@ -126,7 +132,6 @@ h2{
     color: black;
     font-weight: bold;
     font-size: 22px;
-    animation: number-color 4s infinite;
     transition: 0.5s all;
 }
 
@@ -151,11 +156,6 @@ h2{
     color: red;
 }
 
-@keyframes number-color{
-    0% {color: black;}
-    50% {color: red;}
-    100% {color: black;}
-}
 .header-contact-auto-service a:hover,
 .header-contact-tire-service a:hover{
     transform: scale(1.2);
@@ -543,7 +543,6 @@ footer{
     color: white;
     text-decoration: none;
     font-size: 25px;
-    animation: number-color-footer 3s infinite;
     transition: 0.5s all;
     font-family: 'Passion One', cursive;
     letter-spacing: 1px;
@@ -554,13 +553,6 @@ footer{
 .footer-tire-service a:active{
     transform: scale(1.2);
     transition: 0.5s all;
-}
-
-@keyframes number-color-footer{
-    0% {color: rgb(255, 255, 255);}
-    50% {color: red;}
-    100% {color: rgb(255, 255, 255);}
-
 }
 
 .footer-timetable {
@@ -581,6 +573,8 @@ footer{
 .footer-social {
     grid-area: footer-social;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     flex-direction: column;
 }
 .footer-social img{
@@ -670,7 +664,9 @@ footer{
     height: 100%;
 }
 .advantages{
-    justify-content: center;
+    justify-content: space-around;
+    padding-left: 30px;
+    border: #00ff40 1px solid;
 }
 .advantage_item{
     width: 47%;
@@ -679,6 +675,7 @@ footer{
 .advantage_item:nth-child(1),
 .advantage_item:nth-child(3){
     margin-right: 15px;
+    border: #00ff40 1px solid;
 }
 
 .services{
@@ -799,6 +796,9 @@ footer{
 }
 .footer-social a{
     margin-right: 30px;
+}
+.footer-social a:last-child{
+    margin-right: 0;
 }
 .footer-social a:last-child{
     margin-right: 0;
@@ -961,6 +961,5 @@ footer{
         grid-template-areas:
         'footer-car footer-tire footer-map'
         'footer-timetable footer-social footer-map';
-    }
-    
+    } 
 }
