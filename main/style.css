@@ -276,6 +276,9 @@ h2{
    text-align: center;
    margin-bottom: 40px;
 }
+.h2-bold{
+    font-weight: 700;
+}
 .advantages{
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.5);
