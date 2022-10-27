@@ -128,6 +128,7 @@ table.services-price-inside-table tr:last-child{
 @media (min-width: 1200px){
     .services-description{
         padding: 0 30px;
+        max-width: 1300px;
     }
     .services-price table{
         width: 80%;
