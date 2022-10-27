@@ -620,6 +620,7 @@ footer{
     display: flex;
     justify-content: end;
     padding-right: 10px;
+    font-size: 12px;
 }
 .autor a{
     color: white;
@@ -980,4 +981,11 @@ footer{
         'footer-car footer-tire footer-map'
         'footer-timetable footer-social footer-map';
     } 
+}
+
+@media (max-width: 403px){
+    .services-info{
+        height:90px;
+        padding: 10px;
+    }
 }
