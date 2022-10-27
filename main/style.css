@@ -140,6 +140,9 @@ body{
     flex-wrap: wrap;
     justify-content: center;
 }
+.header-addres-wrapper{
+    text-align: center;
+}
 .header-addres img{
     width: 30px;
 }
