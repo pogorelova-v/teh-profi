@@ -277,7 +277,7 @@ h2{
    margin-bottom: 40px;
 }
 .h2-bold{
-    font-weight: 700;
+    font-weight: 900;
 }
 .advantages{
     background-color: rgba(255, 255, 255, 0.5);
@@ -444,7 +444,7 @@ h2{
     width: 60%;
     display: grid;
     grid-template-columns: 1% 32% 32% 32% 1%;
-    grid-template-rows: repeat(5, 70px);
+    grid-template-rows: repeat(5, 50px);
     grid-template-areas:    
         '. phone arrow-1 clock .' 
         '. . . arrow-2 .'
@@ -756,7 +756,7 @@ footer{
 }
 .simply-scheme {
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: repeat(2, 80px);
+    grid-template-rows: repeat(2, 60px);
     grid-template-areas:    
         'phone arrow-1 clock arrow-2 driving' 
         '. . . . arrow-3'
