@@ -989,3 +989,13 @@ footer{
         padding: 10px;
     }
 }
+@media (max-width: 344px){
+   body{
+    font-size: 14px;
+   }
+   .header-contact-auto-service,
+    .header-contact-tire-service,
+    .header-timetable{
+    flex-direction: column;
+}
+}
