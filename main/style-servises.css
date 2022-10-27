@@ -185,10 +185,10 @@ table.services-price-inside-table tr:last-child{
     color: white;
 }
 .sale-item-1{
-    background-image: url('../assets/img/sale1.jpg');
+    background-image: url('../assets/img/sale-page1.jpg');
 }
 .sale-item-2{
-    background-image: url('../assets/img/sale2.jpg');
+    background-image: url('../assets/img/sale4.jpg');
 }
 @media (min-width: 768px) {
     .sale-info{
@@ -214,6 +214,9 @@ table.services-price-inside-table tr:last-child{
     .sale-item{
         width: 45%;
     }
+    .sale-info{
+        min-height: 200px;
+    } 
 }
 
 /*------------------------------.advantages-----------------------*/

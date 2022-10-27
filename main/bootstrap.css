@@ -5989,9 +5989,9 @@ textarea.form-control-lg {
   left: 15%;
   color: #fff;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
-  box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
 }
 
