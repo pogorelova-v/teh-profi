@@ -439,6 +439,7 @@ h1{
 
 .simply-wrapper{
     z-index: -1;
+    margin-bottom: 50px;
 }
 .simply li,
 .simply-slogan,
@@ -494,14 +495,14 @@ h1{
 .simply-arrow-2 {
     grid-area: arrow-2;
 }
-.simple-driving {
+.simply-driving {
     grid-area: driving;
 }
 .simply-arrow-3 {
     grid-area: arrow-3;
     transform: rotate(90deg);
 }
-.simple-maintenance {
+.simply-maintenance {
     grid-area: maintenance;
 }
 .simply-arrow-4 {
@@ -932,16 +933,18 @@ footer{
     .advantage_item{
         width: 40%;
         margin-bottom: 40px;
-    }    
-    .simply-wrapper{
+    }  
+    .simply-scheme-form{
         display: flex;
+        justify-content: center;
         align-items: center;
-        justify-content: space-between;
     }
-    .simpli-info{
-        width: 60%;
+    .simply-form{
+        margin: 0;
+        margin-left: 20px;
     }
     .simply-scheme {
+        margin: 0;
         width: 35%;
         grid-template-columns: 20% 20% 20% 20% 20%;
         grid-template-rows: 80px 40px 80px;
