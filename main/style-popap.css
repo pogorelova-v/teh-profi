@@ -1,24 +1,27 @@
-.form {
+.form{
+    margin: 0 auto;
+    transition: all 1s;
+    z-index: 10;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
     background-color: white;
-    border: solid 2px rgb(0, 0, 0);
     padding: 20px 10px;
+    transition: 1s;
+    border: solid 2px rgb(0, 0, 0);
     min-width: 300px;
     max-width: 450px;
-    margin: 0 auto;
-    position: fixed;
-    top: 10vh;
-    transition: all 1s;
-    z-index: 10;
-    transform: translateX(-768px);
-}
-#service-form-open{
-    position: static;
-    transform: translateX(0);
 }
 .form-active{
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
     transition: all 1s;
-    transform: translateX(0);
-    box-shadow: 0 0 500px 200px black;
 }
 .close-popup{
     position: absolute;
@@ -196,22 +199,6 @@ textarea::placeholder{
   /*-----------------------------*/
 
 
-@media (min-width: 1000px){
-    .form {
-        transform: translateX(-1000px);
-    }
-    .form-active{
-        transform: translateX(0);
-    }
-}
-@media (min-width: 1400px){
-    .form {
-        transform: translateX(-1900px);
-    }
-    .form-active{
-        transform: translateX(0);
-    }
-}
 
 @media (max-width: 380px){
     h4.form__title{
@@ -219,5 +206,16 @@ textarea::placeholder{
     }
     .form p{
         font-size: 14px;
+    }
+}
+@media (min-width: 1000px){
+    .services-dop-form{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .service-dop{
+        width: 50%;
+        margin-left: 20px;
     }
 }

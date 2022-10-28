@@ -84,6 +84,7 @@ detailedDataWrap.addEventListener('click', () => {
 //--------------------------------------------------------------
 
 const formPopap = document.querySelector('.form');
+const formbody = document.querySelector('form');
 const buttonFormPopup = document.querySelector('.button-formPopup');
 const closePopup = document.querySelector('.close-popup');
 const formButton = document.querySelector('.form__button');
@@ -93,7 +94,7 @@ buttonFormPopup.addEventListener('click', () => {
 });
 
 document.addEventListener( 'click', (e) => {
-	const withinBoundaries = e.composedPath().includes(formPopap);
+	const withinBoundaries = e.composedPath().includes(formbody);
 	const withinBoundariesBut = e.composedPath().includes(buttonFormPopup);
 	const withinBoundariesIx = e.composedPath().includes(closePopup);
 	const withinBoundariesFB = e.composedPath().includes(formButton);

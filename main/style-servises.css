@@ -91,6 +91,12 @@ table.services-price-inside-table td:first-child{
 table.services-price-inside-table tr:last-child{
     border-bottom: none;
 }
+.btn-services-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .dd-button{
     margin: 0 0 20px 0;
@@ -138,8 +144,7 @@ table.services-price-inside-table tr:last-child{
 }
 @media (min-width: 768px){
     .btn-services-page{
-        display: flex;
-        justify-content: center;
+        flex-direction: row;
     }
     .dd-button{
         margin: 30px 10px 50px 10px;
