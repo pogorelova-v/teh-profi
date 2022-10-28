@@ -48,8 +48,6 @@ serviceItems.forEach((element,index) => {
 const stickyMenu = document.querySelector('.sticky-menu-contain');
 const scrollHeight = stickyMenu.offsetTop;
 
-console.log(stickyMenu.offsetTop);
-
 window.addEventListener('scroll', function() {
     let windowHeight = window.pageYOffset;
     if(windowHeight > scrollHeight){
@@ -108,3 +106,28 @@ document.addEventListener( 'click', (e) => {
 })
 
 //---------------------------------------------
+
+const servicesPageImg = document.querySelectorAll('.services-img')
+const servicesPageDescription = document.querySelector('.services-description')
+
+servicesPageImg.forEach((element, index) => {
+    element.addEventListener('click', () => {
+        if(index = 0){
+            element.classList.toggle('services-img-open')
+            servicesPageDescription.classList.toggle('services-description-open')
+        } else {
+            element.classList.toggle('services-img-open')
+        }
+    })    
+});
+
+
+document.addEventListener( 'click', (e) => {
+    servicesPageImg.forEach((element) => {
+        const withinBoundaries = e.composedPath().includes(element);
+	    if ( ! withinBoundaries) {
+		    element.classList.remove('services-img-open')
+            
+	    }   
+    });
+})

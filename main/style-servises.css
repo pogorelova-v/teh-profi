@@ -92,27 +92,70 @@ table.services-price-inside-table tr:last-child{
     border-bottom: none;
 }
 
+.dd-button{
+    margin: 0 0 20px 0;
+}
 .services-img{
     border: black 3px solid;
     width: 100%;
     margin: 0 0 30px 0;
 }
-.dd-button{
-    margin: 0 0 20px 0;
-}
 .service-gallery img{
-    width: 100%;
     margin-bottom: 5px;
 }
-
+.service-gallery{
+    margin-bottom: 50px;
+}
+.waiting-you-wrapper{
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+@media (min-width: 600px){
+    .services-description{
+        display: flex;
+        align-items: center;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .service-gallery{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        transition: 0.5s;
+    }
+    .services-img{
+        width: 40%;
+        transition: 0.5s;
+    }
+    .service-gallery img{
+        margin: 5px;transition: 0.5s;
+    }
+    .services-img-open{
+        width: 100%;
+        transition: 0.5s;
+        position: relative;
+    }
+}
+@media (min-width: 768px){
+    .btn-services-page{
+        display: flex;
+        justify-content: center;
+    }
+    .dd-button{
+        margin: 30px 10px 50px 10px;
+    }
+}
 @media (min-width: 1000px){
     .burger-bar-content{
         display: block;
         padding-left: 100px;
+    }    
+    .service-gallery img.services-img-open{
+        width: 80%;
     }
 }
 @media (min-width: 1200px){
-    .services-price table{
+    .services-price{
         width: 80%;
     }
 }

@@ -11,6 +11,10 @@
     z-index: 10;
     transform: translateX(-768px);
 }
+#service-form-open{
+    position: static;
+    transform: translateX(0);
+}
 .form-active{
     transition: all 1s;
     transform: translateX(0);
@@ -209,3 +213,11 @@ textarea::placeholder{
     }
 }
 
+@media (max-width: 380px){
+    h4.form__title{
+        font-size: 16px;
+    }
+    .form p{
+        font-size: 14px;
+    }
+}

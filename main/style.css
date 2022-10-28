@@ -905,16 +905,7 @@ footer{
     margin-bottom: 10px;
 }
 
-    .burger-bar-content,
-    .burger-bar-img{
-        display: none;
-        font-size: 18px;
-    }
 
-    .main-menu{
-        display: block;
-        padding: 5px 0;
-    }
     .main-menu ul{        
         display: flex;
         margin: 0;
@@ -978,6 +969,16 @@ footer{
 @media (min-width: 1200px){
     #tireService .service-img-wrapper img{
         height: 150%;
+    }
+    .burger-bar-content,
+    .burger-bar-img{
+        display: none;
+        font-size: 18px;
+    }
+
+    .main-menu{
+        display: block;
+        padding: 5px 0;
     }
 }
 @media (min-width: 1400px){
