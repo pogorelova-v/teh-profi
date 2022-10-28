@@ -2,8 +2,10 @@ body{
     font-family: 'Merriweather', serif;
     background-image: url('../assets/icon/background.jpg');
     background-repeat: repeat;
-    padding-top: 20px;
     font-weight: 500;
+}
+.header-wrapper{
+    display: none;
 }
 .fixed-call{
     position: fixed;
@@ -77,92 +79,6 @@ body{
 }
 /*-------------------------------------------------*/
 
-.header-wrapper{
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: center;
-    grid-template-areas: 
-    'header-logo'
-    'header-contacts'
-    'header-addres';
-    padding: 0 20px;
-    margin: 0 auto;
-    
-    background-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.4);
-    z-index: -1;
-}
-.header-logo{
-    margin-bottom: 15px;
-    grid-area: header-logo ;
-}
-.header-logo img{
-    width: 100%;
-}
-.header-contacts{
-    margin-bottom: 15px;
-    grid-area: header-contacts ;
-}
-.header-contacts a{
-    font-family: 'Passion One', 'Russo One', sans-serif;
-    letter-spacing: 1px;
-}
-.header-contact-auto-service,
-.header-contact-tire-service,
-.header-timetable{
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.header-contacts span,
-.header-timetable{
-    margin-right: 15px;
-    font-family: 'Russo One', sans-serif;    
-}
-.header-timetable{
-    flex-direction: column;
-}
-.header-contacts a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 22px;
-    transition: 0.5s all;
-}
-
-.header-addres{
-    margin-bottom: 15px;
-    grid-area:header-addres;
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.header-addres-wrapper{
-    text-align: center;
-}
-.header-addres img{
-    width: 30px;
-}
-.header-addres a{
-    text-decoration: none;
-    color: black;
-    white-space: nowrap;
-    margin-right: 5px;
-}
-.header-addres a:hover{
-    color: red;
-}
-
-.header-contact-auto-service a:hover,
-.header-contact-tire-service a:hover{
-    transform: scale(1.2);
-    transition: all 0.5s;
-    margin-left: 10px;
-    display: block;
-}
 
 /**-------------------------*/
 .menu{
@@ -178,9 +94,13 @@ body{
 }
 .menu span{
     color: white;
-    display: block;
     letter-spacing: 1px;
-    white-space: nowrap
+    white-space: nowrap;
+    display: none;
+}
+
+.menu-logo img{
+    width: 100px;
 }
 .main-menu-sale{
     animation: sale-color 3s infinite;
@@ -244,6 +164,7 @@ body{
     transition: all 0.5s;
     color: red;
 }
+
 .sticky-menu{
     position: fixed;
     top: 0;
@@ -604,7 +525,6 @@ footer{
 }
 .footer-timetable a{
     text-decoration: none;
-    margin-top: 15px;
     color: white;
 }
 .footer-timetable a:hover,
@@ -659,48 +579,107 @@ footer{
 
 /*---------------------------------------*/
 
-@media (min-width: 768px) {
-    
-    body{
-        padding-top: 40px;
+@media (min-width: 500px) {
+    .menu span{
+        display: block;
     }
-.header-wrapper{
-    grid-template-columns: 65% 35%;
-    justify-items: center;
-    align-items: center;
-    grid-template-areas: 
-    'header-logo header-contacts'
-    'header-logo header-contacts'
-    'header-logo header-contacts'
-    'header-addres header-timetable';
-    padding: 0 10px;
+    
+    .menu-logo img{
+        width: 150px;
+    }
 }
-.header-timetable{
-    grid-area: header-timetable;
-}
-.header-logo{
-    margin-bottom: 5px;
-    grid-area: header-logo ;
-}
-.header-logo img{
-    width: 100%;
-}
-.header-contacts{
-    margin-bottom: 0;
-    grid-area: header-contacts ;
-}
-.header-contact-auto-service,
-.header-contact-tire-service,
-.header-timetable{
-    margin-bottom: 20px;
-    flex-direction: column;
-}
-.header-contacts a{
-    font-size: 25px;
-}
-.header-addres{
-    grid-area:header-addres;
-}
+
+@media (min-width: 768px) {
+
+    .header-wrapper{
+        display: grid;
+        grid-template-columns: 20% 50% 30%;
+        justify-items: center;
+        align-items: center;
+        grid-gap: 5px;
+        grid-template-areas: 
+        'header-logo header-contacts header-timetable'
+        'header-logo header-contacts header-addres';
+        padding: 5px 10px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.4);
+        z-index: -1;
+    }
+    .header-logo{
+        grid-area: header-logo ;
+    }
+    .header-logo img{
+        width: 100%;
+    }
+    .header-contacts{
+        grid-area: header-contacts ;
+    }
+    .header-contacts a{
+        font-family: 'Passion One', 'Russo One', sans-serif;
+        letter-spacing: 1px;
+    }
+    .header-contact-auto-service,
+    .header-contact-tire-service,
+    .header-timetable{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-contacts span,
+    .header-timetable{
+        font-family: 'Russo One', sans-serif;    
+    }
+    .header-timetable{
+        grid-area: header-timetable ;
+        flex-direction: column;
+    }
+    .header-contacts a{
+        margin-left: 10px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.5s all;
+    }
+    
+    .header-addres{
+        grid-area:header-addres;
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        justify-content: center;
+        letter-spacing: 110%;
+    }
+    .header-addres-wrapper{
+        text-align: center;
+    }
+    .header-addres img{
+        width: 20px;
+    }
+    .header-addres a{
+        text-decoration: none;
+        color: black;
+        white-space: nowrap;
+        margin-right: 5px;
+        font-size: 14px;
+    }
+    .header-addres a:hover{
+        color: red;
+    }
+    
+    .header-contact-auto-service a:hover,
+    .header-contact-tire-service a:hover{
+        transform: scale(1.2);
+        transition: all 0.5s;
+        margin-left: 10px;
+        display: block;
+    }
+    .menu-logo{
+        display: none;
+    }
+
+
 
 .carousel-caption {
     position: absolute;
@@ -782,7 +761,7 @@ footer{
 
 .simply-wrapper{
     border: black 1px solid;
-    padding-top: 20px;
+    padding: 20px;
     margin-bottom: 60px;
 }
 .simply li{
@@ -893,19 +872,16 @@ footer{
 }
 @media (min-width: 1100px){
 
-.header-wrapper{
-    align-items: end;
-    grid-template-areas: 
-    'header-logo header-contacts'
-    'header-logo header-contacts'
-    'header-logo header-timetable'
-    'header-logo header-addres';
-}
-.header-contact-auto-service,
-.header-contact-tire-service{
-    margin-bottom: 10px;
-}
-
+    .header-wrapper{
+        display: grid;
+        grid-template-columns: 10% 20% 30% 30% 10%;
+        justify-items: center;
+        align-items: center;
+        grid-gap: 5px;
+        grid-template-areas: 
+        '. header-logo header-contacts header-timetable .'
+        '. header-logo header-contacts header-addres .';
+    }
 
     .main-menu ul{        
         display: flex;
@@ -985,18 +961,12 @@ footer{
     }
 }
 @media (min-width: 1400px){
-    .header-contacts a{
-        font-size: 30px;
-    }
     .tehprofi-this img{
         max-width: 30%;
     }
 
     .services-wrapper{
         width: 1100px;
-    }
-    .header-timetable{
-        font-size: 20px;
     }
     .advantage_item img{
         width: 70px;
@@ -1007,14 +977,15 @@ footer{
 
 }
 @media (min-width: 1600px){
-    .header-contacts span{
-        font-size: 24px;
+    .header-contacts span,
+    .header-timetable span{
+        font-size: 18px;
     }
-    .header-addres{
-        font-size: 20px;
+    .header-addres-wrapper a{
+        font-size: 16px;
     }
     .header-contacts a{
-        font-size: 35px;
+        font-size: 22px;
     }
     .footer-info{
         display: grid;

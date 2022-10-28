@@ -143,7 +143,6 @@ table.services-price-inside-table tr:last-child{
     .services-img-open{
         width: 100%;
         transition: 0.5s;
-        position: relative;
     }
 }
 @media (min-width: 768px){
