@@ -591,13 +591,6 @@ footer{
 
 @media (min-width: 768px) {
 
-    
-    .menu-logo{
-        display: none;
-    }
-
-
-
 .carousel-caption {
     position: absolute;
     right: 25%;
@@ -789,6 +782,10 @@ footer{
 }
 @media (min-width: 1100px){
 
+    .menu-logo{
+        display: none;
+    }
+    
     .header-wrapper{
         display: grid;
         grid-template-columns: 10% 20% 30% 30% 10%;
