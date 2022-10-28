@@ -12,22 +12,22 @@ body{
     color: white;
     letter-spacing: 1px;
     display: flex;
-    flex-direction:column;
+    flex-direction:row;
+    justify-content: space-around;
     align-items: center;
-    padding: 10px;
+    padding: 10px 10px 0 10px;
     line-height: 150%;
+}
+.header-contact-mini-auto-call span,
+.header-contact-mini-tire-call span{
+    font-size: 12px;
 }
 .header-contact-mini-auto-call a,
 .header-contact-mini-tire-call a{
     font-family: 'Russo One', sans-serif;
 }
-.header-contact-mini-addres{
-    font-size: 14px;
-    margin-top: 15px;
-}
-.header-contact-mini-addres a{
-   display: block;
-   text-align: center;
+.header-contact-mini-addres a img{
+    width: 25px;
 }
 .header-wrapper-mini a{
     text-decoration: none;
@@ -610,26 +610,15 @@ footer{
         display: block;
     }
     
-    .menu-logo img{
-        width: 150px;
-    }
 }
 
 @media (min-width: 768px) {
-
-    .header-wrapper-mini{
-        justify-content: space-around;
-        flex-direction:row;
-    }
-    .header-contact-mini-addres{
-        width: 30%;
+    .header-contact-mini-call{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 0;
     }
-
+    .header-contact-mini-auto-call{
+        margin-right: 20px;
+    }
 
 .carousel-caption {
     position: absolute;
