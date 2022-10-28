@@ -825,6 +825,9 @@ footer{
     .menu-logo{
         display: none;
     }
+    .header-wrapper-mini{
+        display: none;
+    }
 
     .header-wrapper{
         display: grid;
@@ -974,6 +977,7 @@ footer{
 }
 
 @media (min-width: 1200px){
+
     #tireService .service-img-wrapper img{
         height: 150%;
     }
