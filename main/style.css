@@ -7,6 +7,32 @@ body{
 .header-wrapper{
     display: none;
 }
+.header-wrapper-mini{
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 10px;
+    line-height: 150%;
+}
+.header-contact-mini-auto-call a,
+.header-contact-mini-tire-call a{
+    font-family: 'Russo One', sans-serif;
+}
+.header-contact-mini-addres{
+    font-size: 14px;
+    margin-top: 15px;
+}
+.header-contact-mini-addres a{
+   display: block;
+   text-align: center;
+}
+.header-wrapper-mini a{
+    text-decoration: none;
+    color: white;
+}
 .fixed-call{
     position: fixed;
     display: flex;
@@ -591,6 +617,20 @@ footer{
 
 @media (min-width: 768px) {
 
+    .header-wrapper-mini{
+        justify-content: space-around;
+        flex-direction:row;
+    }
+    .header-contact-mini-addres{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+
 .carousel-caption {
     position: absolute;
     right: 25%;
@@ -785,7 +825,7 @@ footer{
     .menu-logo{
         display: none;
     }
-    
+
     .header-wrapper{
         display: grid;
         grid-template-columns: 10% 20% 30% 30% 10%;
