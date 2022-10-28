@@ -110,8 +110,9 @@ document.addEventListener( 'click', (e) => {
 
 const servicesPageImg = document.querySelectorAll('.services-img')
 const servicesPageDescription = document.querySelector('.services-description')
+const reasonsText = document.querySelector('.reasons')
 
-servicesPageImg.forEach((element, index) => {
+servicesPageImg.forEach((element) => {
     element.addEventListener('click', () => {
         if(index = 0){
             element.classList.toggle('services-img-open')
@@ -119,6 +120,11 @@ servicesPageImg.forEach((element, index) => {
         } else {
             element.classList.toggle('services-img-open')
         }
+
+        if(element.classList.contains('reasons-img')){
+            reasonsText.classList.toggle('dn')
+        }
+
     })    
 });
 
