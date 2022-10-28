@@ -591,90 +591,7 @@ footer{
 
 @media (min-width: 768px) {
 
-    .header-wrapper{
-        display: grid;
-        grid-template-columns: 20% 50% 30%;
-        justify-items: center;
-        align-items: center;
-        grid-gap: 5px;
-        grid-template-areas: 
-        'header-logo header-contacts header-timetable'
-        'header-logo header-contacts header-addres';
-        padding: 5px 10px;
-        margin: 0 auto;
-        background-color: rgba(255, 255, 255, 0.4);
-        box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.4);
-        z-index: -1;
-    }
-    .header-logo{
-        grid-area: header-logo ;
-    }
-    .header-logo img{
-        width: 100%;
-    }
-    .header-contacts{
-        grid-area: header-contacts ;
-    }
-    .header-contacts a{
-        font-family: 'Passion One', 'Russo One', sans-serif;
-        letter-spacing: 1px;
-    }
-    .header-contact-auto-service,
-    .header-contact-tire-service,
-    .header-timetable{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .header-contacts span,
-    .header-timetable{
-        font-family: 'Russo One', sans-serif;    
-    }
-    .header-timetable{
-        grid-area: header-timetable ;
-        flex-direction: column;
-    }
-    .header-contacts a{
-        margin-left: 10px;
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-        font-size: 20px;
-        transition: 0.5s all;
-    }
     
-    .header-addres{
-        grid-area:header-addres;
-        display: flex;
-        align-items: flex-end;
-        flex-wrap: wrap;
-        justify-content: center;
-        letter-spacing: 110%;
-    }
-    .header-addres-wrapper{
-        text-align: center;
-    }
-    .header-addres img{
-        width: 20px;
-    }
-    .header-addres a{
-        text-decoration: none;
-        color: black;
-        white-space: nowrap;
-        margin-right: 5px;
-        font-size: 14px;
-    }
-    .header-addres a:hover{
-        color: red;
-    }
-    
-    .header-contact-auto-service a:hover,
-    .header-contact-tire-service a:hover{
-        transform: scale(1.2);
-        transition: all 0.5s;
-        margin-left: 10px;
-        display: block;
-    }
     .menu-logo{
         display: none;
     }
@@ -881,6 +798,80 @@ footer{
         grid-template-areas: 
         '. header-logo header-contacts header-timetable .'
         '. header-logo header-contacts header-addres .';
+        padding: 5px 10px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.4);
+        z-index: -1;
+    }
+    .header-logo{
+        grid-area: header-logo ;
+    }
+    .header-logo img{
+        width: 100%;
+    }
+    .header-contacts{
+        grid-area: header-contacts ;
+    }
+    .header-contacts a{
+        font-family: 'Passion One', 'Russo One', sans-serif;
+        letter-spacing: 1px;
+    }
+    .header-contact-auto-service,
+    .header-contact-tire-service,
+    .header-timetable{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-contacts span,
+    .header-timetable{
+        font-family: 'Russo One', sans-serif;    
+    }
+    .header-timetable{
+        grid-area: header-timetable ;
+        flex-direction: column;
+    }
+    .header-contacts a{
+        margin-left: 10px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.5s all;
+    }
+    
+    .header-addres{
+        grid-area:header-addres;
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        justify-content: center;
+        letter-spacing: 110%;
+    }
+    .header-addres-wrapper{
+        text-align: center;
+    }
+    .header-addres img{
+        width: 20px;
+    }
+    .header-addres a{
+        text-decoration: none;
+        color: black;
+        white-space: nowrap;
+        margin-right: 5px;
+        font-size: 14px;
+    }
+    .header-addres a:hover{
+        color: red;
+    }
+    
+    .header-contact-auto-service a:hover,
+    .header-contact-tire-service a:hover{
+        transform: scale(1.2);
+        transition: all 0.5s;
+        margin-left: 10px;
+        display: block;
     }
 
     .main-menu ul{        
