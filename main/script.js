@@ -59,7 +59,7 @@ window.addEventListener('scroll', function() {
 
   //------------------------------------------------------------
 
-const detailedData = document.querySelector('.detailed-data-span');
+/*const detailedData = document.querySelector('.detailed-data-span');
 const detailedDataWrap = document.querySelector('.detailed-data');
 const detailedDataImg = document.querySelector('.detailed-data-img');
 const detailedDataContent = document.querySelector('.detailed-data-content');
@@ -79,11 +79,11 @@ detailedDataWrap.addEventListener('click', () => {
             detailedDataImg.classList.remove('detailed-data-active-img')
             detailedDataContent.classList.remove('detailed-data-content-active')
         }
-});
+}); */
 
 //--------------------------------------------------------------
 
-const formPopap = document.querySelector('.form');
+/*const formPopap = document.querySelector('.form');
 const formbody = document.querySelector('form');
 const buttonFormPopup = document.querySelector('.button-formPopup');
 const closePopup = document.querySelector('.close-popup');
@@ -104,7 +104,7 @@ document.addEventListener( 'click', (e) => {
 	} else if (withinBoundariesIx || withinBoundariesFB){
         formPopap.classList.remove('form-active')
     }
-})
+}) */
 
 //---------------------------------------------
 
@@ -146,7 +146,7 @@ document.addEventListener( 'click', (e) => {
 
 document.addEventListener('DOMContentLoaded', function(){ //ждём пока страница полностью прогрузится
     const form = document.getElementById('form'); //объявляем переменную, присваиваем в неё всю форму по id
-    form.addEventListener('submit', formSend); //слушаем событие submit в форме, по клику мы перейдём в функцию formSend
+    form.addEventListener('submit', formSend); // formSend слушаем событие submit в форме, по клику мы перейдём в функцию formSend
  
     async function formSend(e) { // функция formSend
         e.preventDefault();  //запрет на стандартную отправку формы, что бы сделать это без перезагрузки

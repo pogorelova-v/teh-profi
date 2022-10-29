@@ -10,7 +10,7 @@ $mail->CharSet = 'UTF-8';    //Указываем кодировку
 $mail->setLanguage('ru', 'phpmailer/language/');    //Язык для уведомлений (из папки плагина)
 $mail->IsHTML(true);    //Подключает возможность HTML тегов в письме
 
-$mail->setFrom('gorelikovavn@gmail.com');     //От кого, почтовый ящик хостинга!
+$mail->setFrom('don-dragon@don-dragon.ru');     //От кого, почтовый ящик хостинга!
 $mail->addAddress('gorelikovavn@gmail.com');    //Куда отправить
 $mail->Subject = 'Новое обращение с сайта';    //Тема письма
 
