@@ -59,7 +59,7 @@ window.addEventListener('scroll', function() {
 
   //------------------------------------------------------------
 
-/*const detailedData = document.querySelector('.detailed-data-span');
+const detailedData = document.querySelector('.detailed-data-span');
 const detailedDataWrap = document.querySelector('.detailed-data');
 const detailedDataImg = document.querySelector('.detailed-data-img');
 const detailedDataContent = document.querySelector('.detailed-data-content');
@@ -79,11 +79,11 @@ detailedDataWrap.addEventListener('click', () => {
             detailedDataImg.classList.remove('detailed-data-active-img')
             detailedDataContent.classList.remove('detailed-data-content-active')
         }
-}); */
+}); 
 
 //--------------------------------------------------------------
 
-/*const formPopap = document.querySelector('.form');
+const formPopap = document.querySelector('.form');
 const formbody = document.querySelector('form');
 const buttonFormPopup = document.querySelector('.button-formPopup');
 const closePopup = document.querySelector('.close-popup');
@@ -104,7 +104,7 @@ document.addEventListener( 'click', (e) => {
 	} else if (withinBoundariesIx || withinBoundariesFB){
         formPopap.classList.remove('form-active')
     }
-}) */
+}) 
 
 //---------------------------------------------
 
