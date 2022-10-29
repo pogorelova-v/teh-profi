@@ -2,15 +2,16 @@
 use PHPMailer\PHPMailer\PHPMailer;   //Подключаем файлы плагина
 use PHPMailer\PHPMailer\Exception;   //Подключаем файлы плагина
 
-require 'phpmailer/src/Exception.php';   //Путь к файлу плагина
-require 'phpmailer/src/PHPMailer.php';   //Путь к файлу плагина
+require '/var/www/u130317/data/www/don-dragon.ru/PHPMailer/src/Exception.php';   //Путь к файлу плагина
+require '/var/www/u130317/data/www/don-dragon.ru/PHPMailer/src/PHPMailer.php';   //Путь к файлу плагина
 
 $mail = new PHPMailer(true);  //Объявляем плагин
 $mail->CharSet = 'UTF-8';    //Указываем кодировку
 $mail->setLanguage('ru', 'phpmailer/language/');    //Язык для уведомлений (из папки плагина)
 $mail->IsHTML(true);    //Подключает возможность HTML тегов в письме
 
-$mail->setFrom('don-dragon@don-dragon.ru');     //От кого, почтовый ящик хостинга!
+#$mail->setFrom('Сообщение  с сайта AUTOMOTIV@mail.ru');     //От кого
+$mail->setFrom('automotive52@automotive52.ru'); 
 $mail->addAddress('gorelikovavn@gmail.com');    //Куда отправить
 $mail->Subject = 'Новое обращение с сайта';    //Тема письма
 
