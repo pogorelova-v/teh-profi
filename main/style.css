@@ -417,8 +417,8 @@ h1{
     margin: 0 auto;
     width: 60%;
     display: grid;
-    grid-template-columns: 1% 32% 32% 32% 1%;
-    grid-template-rows: repeat(5, 50px);
+    grid-template-columns: 3% 30% 30% 30% 3%;
+    grid-template-rows: repeat(5, 40px);
     grid-template-areas:    
         '. phone arrow-1 clock .' 
         '. . . arrow-2 .'
@@ -438,6 +438,7 @@ h1{
 }
 .simply-clock {
     grid-area: clock;
+    width: 40px;
 }
 .simply-arrow-2 {
     grid-area: arrow-2;
