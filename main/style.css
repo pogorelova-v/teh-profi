@@ -251,7 +251,7 @@ h1{
     box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.5);
     z-index: -1;   
     font-weight: 400; 
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -292,7 +292,7 @@ h1{
     font-size: 18px;
     margin-top: 20px; /*fix -top*/
     transition: 0.5s;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -311,7 +311,7 @@ h1{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .services a{
     text-decoration: none;
@@ -386,7 +386,7 @@ h1{
 
 .simply-wrapper{
     z-index: -1;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .simply li,
 .simply-slogan,
@@ -401,7 +401,7 @@ h1{
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .simply-slogan span{
     font-weight: 900;
@@ -474,7 +474,7 @@ h5{
 .waiting-you-wrapper{
     background-image: url('../assets/img/wait.jpg');
     background-size: cover;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     background-position: center;
 }
 .waiting-you{
@@ -716,7 +716,7 @@ footer{
         'phone arrow-1 clock arrow-2 driving' 
         '. . . . arrow-3'
         'payment arrow-5 repair arrow-4 maintenance';
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .simply-arrow-2 {
     transform: rotate(270deg);
@@ -739,7 +739,7 @@ h5{
 
 
 footer{
-    padding-top: 50px;
+    padding-top: 30px;
 }
 .footer-info{
     display: grid;
