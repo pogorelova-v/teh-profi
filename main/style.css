@@ -1,10 +1,94 @@
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Merriweather', serif;
     background-image: url('../assets/icon/background.jpg');
     background-repeat: repeat;
-    padding-top: 20px;
     font-weight: 500;
 }
+.header-wrapper{
+    display: none;
+}
+.header-wrapper-mini{
+    background-color: black;
+    color: white;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 10px 0 10px;
+    line-height: 150%;
+}
+.header-contact-mini-auto-call span,
+.header-contact-mini-tire-call span{
+    font-size: 12px;
+}
+.header-contact-mini-auto-call a,
+.header-contact-mini-tire-call a{
+    font-family: 'Russo One', sans-serif;
+}
+.header-contact-mini-addres a img{
+    width: 25px;
+}
+.header-wrapper-mini a{
+    text-decoration: none;
+    color: white;
+}
+.fixed-call{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    bottom: 60px;
+    right: 90px;
+    z-index: 20;
+}
+.fixed-call img{
+    width: 40px;
+}
+.fixed-call a{
+    display: block;
+    border-radius: 50%;
+    padding: 10px;
+    background: linear-gradient(-45deg,  #1a6e00, #00ff40, #00ffbf, #40d158);
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.fixed-car {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 20;
+    animation: climb-up 2s ease infinite;
+}
+.fixed-car img{
+    width: 60px;
+}
+.fixed-car a{
+    display: block;
+}
+
+@keyframes climb-up {
+    0% {
+        bottom: 10px;
+    }
+    50% {
+        bottom: 15px;
+    }
+    100% {
+        bottom: 10px;
+    }
+}
+
 .op{
     border: rgb(9, 255, 0) solid 1px;
 }
@@ -12,82 +96,22 @@ body{
     padding: 0 10px;
     margin: 0 auto;
 }
-h1{
+.d-none{
     display: none;
 }
-h2{
-    margin-bottom: 40px;
-}
-.main-menu,
-.hello-person{
+.main-menu{
     display: none;
+    z-index: 5;
 }
 /*-------------------------------------------------*/
 
-.header-wrapper{
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: center;
-    grid-template-areas: 
-    'header-logo'
-    'header-contacts'
-    'header-addres';
-    padding: 0 20px;
-    margin: 0 auto;
-}
-.header-logo{
-    margin-bottom: 15px;
-    grid-area: header-logo ;
-}
-.header-logo img{
-    width: 100%;
-}
-.header-contacts{
-    margin-bottom: 15px;
-    grid-area: header-contacts ;
-}
-.header-contact-auto-service,
-.header-contact-tire-service{
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.header-contacts span{
-    margin-right: 15px;
-}
-.header-contacts a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 22px;
-    animation: number-color 4s infinite;
-    transition: 0.5s all;
-}
-.header-addres{
-    margin-bottom: 15px;
-    grid-area:header-addres;
-}
-
-@keyframes number-color{
-    0% {color: black;}
-    50% {color: red;}
-    100% {color: black;}
-}
-.header-contact-auto-service a:hover,
-.header-contact-tire-service a:hover{
-    transform: scale(1.2);
-    transition: all 0.5s;
-    margin-left: 10px;
-    display: block;
-}
 
 /**-------------------------*/
 .menu{
     background-color: black;
     padding: 5px 15px;
     position: relative;
+    z-index: 5;
 }
 .menu-wrapper{
     display: flex;
@@ -96,8 +120,22 @@ h2{
 }
 .menu span{
     color: white;
-    display: block;
     letter-spacing: 1px;
+    white-space: nowrap;
+    display: none;
+}
+
+.menu-logo img{
+    width: 100px;
+}
+.main-menu-sale{
+    animation: sale-color 3s infinite;
+    transition: 0.5s all;
+}
+@keyframes sale-color{
+    0% {color: rgb(255, 255, 255);}
+    50% {color: red;}
+    100% {color: rgb(255, 255, 255);}
 }
 .burger-bar-img{
     width: 40px;
@@ -105,6 +143,7 @@ h2{
     display: flex;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 .burger-bar-img img{
     width: 40px;
@@ -125,7 +164,6 @@ h2{
     background-color: black;
     transition: 1s;
     overflow: hidden;
-    max-height: 500px;
     width: 100%;
     left: 0;
     border-top: 1px solid rgb(255, 255, 255);
@@ -152,6 +190,7 @@ h2{
     transition: all 0.5s;
     color: red;
 }
+
 .sticky-menu{
     position: fixed;
     top: 0;
@@ -160,36 +199,89 @@ h2{
 }
 /*-----------------------------*/
 .carousel{
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 .carousel-item img{
-    height: 350px;
+    height: 100%;
 }
-.carousel-caption h5{
-    letter-spacing: 1px;
-    font-size: 20px;
-    font-weight: 300;
-    margin: 0;
+.carousel a{
+    text-decoration: none;
+    color: white;
+}
+.carousel-caption{
+    margin-bottom: 10px;
+}
+.carousel-caption h2{
+    margin-bottom: 10px;
+}
+.carousel-caption a span{
+    font-size: 14px;
+    text-transform: lowercase;
+}
+.carousel-caption a img{
+    width: 20px;
 }
 
+/*-----------------------------------------*/
+.tehprofi-this{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.tehprofi-this h2{
+    display: block;
+    margin: 0 0 0 5px;
+    font-family: 'Russo One', sans-serif;
+}
+.tehprofi-this img{
+    max-width: 70%;
+}
 /*-------------------------------------*/
 h2{
    text-align: center;
+   margin-bottom: 40px;
 }
-.hello{
+.h2-bold,
+h1{
+    font-weight: 900;
+}
+.advantages{
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.5);
-    z-index: -1;    
+    z-index: -1;   
+    font-weight: 400; 
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }
-.hello p span{
+.advantage_item{
+    display: flex;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.advantage_item img{
+    width: 60px;
+    margin-right: 20px;
+}
+.advantage_item p{
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+}
+.advantages p span{
     font-weight: 700;
 }
-
 .button-hello{
    display: flex;
    justify-content: center;
+   position: relative;
 }
-
+.button-advantage a{
+    color: white;
+    text-decoration: none;
+}
 .dd-button{
     border: none;
     background-color: black;
@@ -198,22 +290,31 @@ h2{
     height: 50px;
     border-radius: 10px;
     font-size: 18px;
-    margin: 20px;
+    margin-top: 20px; /*fix -top*/
     transition: 0.5s;
     margin-bottom: 100px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.button-hello button:active{
-    transform: scale(1.3);
+.dd-button:active,
+.dd-button:hover{
     transition: 0.5s;
     background-color: red;
     color: black;
+    font-weight: 700;
 }
 /*--------------------------------------*/
+
 .services{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     margin-bottom: 50px;
+}
+.services a{
+    text-decoration: none;
 }
 .service{
     background-color: black;
@@ -230,8 +331,14 @@ h2{
 .services-info{
     background-color: rgb(0, 0, 0);
     width: 100%;
-    height:80px;
-    padding: 20px;
+    height:70px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.services-info span{
+    display: block;
     text-align: center;
 }
 .service-img-wrapper{
@@ -278,9 +385,14 @@ h2{
 /*---------------------------------*/
 
 .simply-wrapper{
-    background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.5);
     z-index: -1;
+    margin-bottom: 50px;
+}
+.simply li,
+.simply-slogan,
+.simply-scheme{
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.4);
 }
 .simply li span{
     font-weight: 700;
@@ -294,27 +406,28 @@ h2{
 .simply-slogan span{
     font-weight: 900;
 }
+
 .simply-elem{
-    width: 90px;
+    width: 50px;
 }
 .simply-arrow{
-    width: 40px;
+    width: 20px;
 }
 .simply-scheme {
     margin: 0 auto;
-    max-width: 400px;
+    width: 60%;
     display: grid;
     grid-template-columns: 1% 32% 32% 32% 1%;
-    grid-template-rows: repeat(5, 120px);
+    grid-template-rows: repeat(5, 50px);
     grid-template-areas:    
         '. phone arrow-1 clock .' 
         '. . . arrow-2 .'
         '. maintenance arrow-3 driving .'
         '. arrow-4 . . .'
         '. repair arrow-5 payment .';
-        justify-items: center;
-        align-items: center;
-        margin-bottom: 80px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 80px;
 }
 .simply-phone {
     grid-area: phone;
@@ -329,14 +442,14 @@ h2{
 .simply-arrow-2 {
     grid-area: arrow-2;
 }
-.simple-driving {
+.simply-driving {
     grid-area: driving;
 }
 .simply-arrow-3 {
     grid-area: arrow-3;
     transform: rotate(90deg);
 }
-.simple-maintenance {
+.simply-maintenance {
     grid-area: maintenance;
 }
 .simply-arrow-4 {
@@ -357,6 +470,30 @@ h5{
     justify-content:center ;
     margin-bottom: 20px;
 }
+
+.waiting-you-wrapper{
+    background-image: url('../assets/img/wait.jpg');
+    background-size: cover;
+    margin-bottom: 50px;
+    background-position: center;
+}
+.waiting-you{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.waiting-you h2{
+    line-height: 150%;
+}
+
 
 /*---------------------------------------------------*/
 
@@ -387,14 +524,16 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .footer-car-service a,
 .footer-tire-service a{
     color: white;
     text-decoration: none;
     font-size: 25px;
-    animation: number-color-footer 3s infinite;
     transition: 0.5s all;
+    font-family: 'Passion One', cursive;
+    letter-spacing: 1px;
 }
 .footer-car-service a:hover,
 .footer-tire-service a:hover,
@@ -404,27 +543,30 @@ footer{
     transition: 0.5s all;
 }
 
-@keyframes number-color-footer{
-    0% {color: rgb(255, 255, 255);}
-    50% {color: red;}
-    100% {color: rgb(255, 255, 255);}
-
-}
-
 .footer-timetable {
     grid-area: footer-timetable;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.footer-timetable a{
+    text-decoration: none;
+    color: white;
+}
+.footer-timetable a:hover,
+.footer-timetable a:active{
+    color: red;
+}
 .footer-social {
     grid-area: footer-social;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     flex-direction: column;
 }
 .footer-social img{
     width: 70px;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .footer-social a{
     transition: all 0.5s;
@@ -448,6 +590,7 @@ footer{
     display: flex;
     justify-content: end;
     padding-right: 10px;
+    font-size: 12px;
 }
 .autor a{
     color: white;
@@ -462,76 +605,65 @@ footer{
 
 /*---------------------------------------*/
 
-@media (min-width: 768px) {
-    
-    body{
-        padding-top: 40px;
+@media (min-width: 500px) {
+    .menu span{
+        display: block;
     }
-.header-wrapper{
-    grid-template-columns: 65% 35%;
-    justify-items: center;
-    align-items: center;
-    grid-template-areas: 
-    'header-logo header-contacts'
-    'header-logo header-contacts'
-    'header-addres header-contacts';
-    padding: 0 10px;
-}
-.header-logo{
-    margin-bottom: 5px;
-    grid-area: header-logo ;
-}
-.header-logo img{
-    width: 100%;
-}
-.header-contacts{
-    margin-bottom: 0;
-    grid-area: header-contacts ;
-}
-.header-contact-auto-service,
-.header-contact-tire-service{
-    margin-bottom: 30px;
-    flex-direction: column;
-}
-.header-contacts a{
-    font-size: 25px;
-}
-.header-addres{
-    grid-area:header-addres;
+    
 }
 
+@media (min-width: 768px) {
+    .header-contact-mini-call{
+        display: flex;
+    }
+    .header-contact-mini-auto-call{
+        margin-right: 20px;
+    }
 
-.hello-wrapper{
-    font-weight: 400;
-}
-
+.carousel-caption {
+    position: absolute;
+    right: 25%;
+    bottom: auto;
+    top: 50%;
+    left: 25%;
+  }
 .carousel-item img{
-    height: 400px;
+    height: 100%;
+}
+
+
+.tehprofi-this h2{
+    font-size: 30px;
+}
+.tehprofi-this img{
+    max-width: 50%;
+}
+
+.advantages{
+    justify-content: space-around;
+    padding-left: 30px;
+}
+.advantage_item{
+    width: 47%;
+    margin-bottom: 30px;
 }
 
 .services{
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
-    'suspensionRepair diagnosticsCar diagnosticsCar'
-    'maintenance maintenance steeringRepair'
-    'brakeSystem transmission transmission'
+    'suspensionRepair diagnosticsCar maintenance'
+    'steeringRepair brakeSystem transmission'
     'tireService tireService tireFinishing';
     padding: 0;
 }
 .service{
-    height: 280px;
+    height: 250px;
 }
-#suspensionRepair .service-img-wrapper,
-#steeringRepair .service-img-wrapper,
-#brakeSystem .service-img-wrapper,
-#tireFinishing .service-img-wrapper{
+.service-img-wrapper{
     width: auto;
     height: 100%;
 }
-#suspensionRepair img,
-#steeringRepair img,
-#brakeSystem img,
-#tireFinishing img{
+.service-img-wrapper img{
     height: 100%;
     width: 150%;
 }
@@ -559,11 +691,16 @@ footer{
 #tireFinishing{
     grid-area: tireFinishing;
 }
-
+#tireService .service-img-wrapper{
+    width: 100%;
+}
+#tireService .service-img-wrapper img{
+    width: 100%;
+}
 
 .simply-wrapper{
     border: black 1px solid;
-    padding-top: 20px;
+    padding: 20px;
     margin-bottom: 60px;
 }
 .simply li{
@@ -573,9 +710,8 @@ footer{
     margin-bottom: 20px;
 }
 .simply-scheme {
-    max-width: 700px;
     grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: repeat(2, 120px);
+    grid-template-rows: repeat(2, 60px);
     grid-template-areas:    
         'phone arrow-1 clock arrow-2 driving' 
         '. . . . arrow-3'
@@ -595,8 +731,8 @@ footer{
     transform: rotate(90deg);
 }
 h5{
-    display: flex;
-    justify-content:center ;
+    width: 100%;
+    text-align: center;
     margin-bottom: 20px;
     margin-top: 5 0px;
 }
@@ -634,41 +770,143 @@ footer{
 .footer-social a:last-child{
     margin-right: 0;
 }
+.footer-social a:last-child{
+    margin-right: 0;
+}
 
 .autor{
     font-size: 14px;
 }
 
 }
-
+@media (min-width: 1000px){
+    .fixed-call{
+        display: none;
+    }
+    .carousel{
+        max-width: 1000px;
+        margin:  0 auto 100px auto;
+        box-shadow: 0 0 60px 20px black;
+    }
+    .loft1{
+        position: absolute;
+        width: 50%;
+        height: 563px;
+        background-image: url(../assets/img/loft2.jpg);
+        right: 0;
+    }
+    .loft2{
+        position: absolute;
+        width: 50%;
+        height: 563px;
+        background-image: url(../assets/img/loft1.jpg);
+        left: 0;
+    }
+    .service{
+        height: 300px;
+    }
+    .services-info{
+        height:60px;
+    }
+}
 @media (min-width: 1100px){
 
-.header-wrapper{
-    align-items: end;
-    grid-template-areas: 
-    'header-logo header-contacts'
-    'header-logo header-contacts'
-    'header-logo header-addres';
-}
-.header-contact-auto-service,
-.header-contact-tire-service{
-    margin-bottom: 10px;
-}
-
-    .burger-bar-content,
-    .burger-bar-img{
+    .menu-logo{
+        display: none;
+    }
+    .header-wrapper-mini{
         display: none;
     }
 
-
-
-    .main-menu,
-    .hello-person{
+    .header-wrapper{
+        display: grid;
+        grid-template-columns: 10% 20% 30% 30% 10%;
+        justify-items: center;
+        align-items: center;
+        grid-gap: 5px;
+        grid-template-areas: 
+        '. header-logo header-contacts header-timetable .'
+        '. header-logo header-contacts header-addres .';
+        padding: 5px 10px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.4);
+        z-index: -1;
+    }
+    .header-logo{
+        grid-area: header-logo ;
+    }
+    .header-logo img{
+        width: 100%;
+    }
+    .header-contacts{
+        grid-area: header-contacts ;
+    }
+    .header-contacts a{
+        font-family: 'Passion One', 'Russo One', sans-serif;
+        letter-spacing: 1px;
+    }
+    .header-contact-auto-service,
+    .header-contact-tire-service,
+    .header-timetable{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-contacts span,
+    .header-timetable{
+        font-family: 'Russo One', sans-serif;    
+    }
+    .header-timetable{
+        grid-area: header-timetable ;
+        flex-direction: column;
+    }
+    .header-contacts a{
+        margin-left: 10px;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.5s all;
+    }
+    
+    .header-addres{
+        grid-area:header-addres;
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        justify-content: center;
+        letter-spacing: 110%;
+    }
+    .header-addres-wrapper{
+        text-align: center;
+    }
+    .header-addres img{
+        width: 20px;
+    }
+    .header-addres a{
+        text-decoration: none;
+        color: black;
+        white-space: nowrap;
+        margin-right: 5px;
+        font-size: 14px;
+    }
+    .header-addres a:hover{
+        color: red;
+    }
+    
+    .header-contact-auto-service a:hover,
+    .header-contact-tire-service a:hover{
+        transform: scale(1.2);
+        transition: all 0.5s;
+        margin-left: 10px;
         display: block;
     }
+
     .main-menu ul{        
         display: flex;
         margin: 0;
+        font-size: 20px;
     }
     .main-menu ul li{
         list-style: none;
@@ -683,84 +921,34 @@ footer{
         transition: all 0.5s;
         color: red;
     }
+    
+    .tehprofi-this img{
+        max-width: 40%;
+    }
 
-    .hello-wrapper{
+    .advantage_item{
+        width: 40%;
+        margin-bottom: 40px;
+    }  
+    .simply-scheme-form{
         display: flex;
+        justify-content: center;
         align-items: center;
     }
-    .hello-person{
-        margin-right: 50px;
-    }
-    .hello-person img{
-        width: 100%;
-        border-radius: 5px;
-        
-        background-color: rgba(255, 255, 255, 0.5);
-        box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.5);
-    }
-
-
-    .services{
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: 
-        'suspensionRepair diagnosticsCar maintenance maintenance'
-        'steeringRepair steeringRepair brakeSystem transmission'
-        'tireService tireService tireFinishing tireFinishing';
-        padding: 0;
-    }
-    .service{
-        height: 220px;
-    }
-    #suspensionRepair .service-img-wrapper,
-    #diagnosticsCar .service-img-wrapper,
-    #brakeSystem .service-img-wrapper,
-    #transmission .service-img-wrapper{
-        width: auto;
-        height: 100%;
-    }
-    #suspensionRepair img,
-    #diagnosticsCar img,
-    #brakeSystem img,
-    #transmission img{
-        height: 100%;
-        width: 150%;
-    }
-
-    #steeringRepair .service-img-wrapper,
-    #tireFinishing .service-img-wrapper{
-        width: 100%;
-        height: auto;
-    }
-    #steeringRepair img,
-    #tireFinishing img{
-        height: auto;
-        width: 100%;
-    }
-
-    .simply-wrapper{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .simpli-info{
-        width: 60%;
+    .simply-form{
+        margin: 0;
+        margin-left: 20px;
     }
     .simply-scheme {
+        margin: 0;
         width: 35%;
         grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-rows: 120px 50px 120px;
+        grid-template-rows: 80px 40px 80px;
         grid-template-areas:    
             'phone arrow-1 clock arrow-2 driving' 
             '. . . . arrow-3'
             'payment arrow-5 repair arrow-4 maintenance';
     }
-    .simply-elem{
-        width: 50px;
-    }
-    .simply-arrow{
-        width: 20px;
-    }
-
 
     .footer-info{
         display: grid;
@@ -776,20 +964,49 @@ footer{
         margin-bottom: 0px;
     }
 }
+
+@media (min-width: 1200px){
+
+    #tireService .service-img-wrapper img{
+        height: 150%;
+    }
+    .burger-bar-content,
+    .burger-bar-img{
+        display: none;
+        font-size: 18px;
+    }
+
+    .main-menu{
+        display: block;
+        padding: 5px 0;
+    }
+}
 @media (min-width: 1400px){
+    .tehprofi-this img{
+        max-width: 30%;
+    }
+
     .services-wrapper{
         width: 1100px;
     }
+    .advantage_item img{
+        width: 70px;
+    }
+    .advantage_item p{
+       font-size: 18px;
+    }
+
 }
 @media (min-width: 1600px){
-    .header-contacts span{
-        font-size: 24px;
+    .header-contacts span,
+    .header-timetable span{
+        font-size: 18px;
     }
-    .header-addres{
-        font-size: 20px;
+    .header-addres-wrapper a{
+        font-size: 16px;
     }
     .header-contacts a{
-        font-size: 35px;
+        font-size: 22px;
     }
     .footer-info{
         display: grid;
@@ -798,6 +1015,16 @@ footer{
         grid-template-areas:
         'footer-car footer-tire footer-map'
         'footer-timetable footer-social footer-map';
-    }
-    
+    } 
+}
+
+@media (max-width: 344px){
+   body{
+    font-size: 14px;
+   }
+   .header-contact-auto-service,
+    .header-contact-tire-service,
+    .header-timetable{
+    flex-direction: column;
+}
 }
