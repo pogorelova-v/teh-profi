@@ -274,6 +274,11 @@ table.services-price-inside-table tr:last-child{
         min-height: 200px;
     } 
 }
+@media (max-width: 400px){
+    .sale-item{
+        height: auto;
+    }
+}
 
 /*------------------------------.advantages-----------------------*/
 

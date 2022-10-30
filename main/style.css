@@ -174,7 +174,7 @@ body{
     border: none;
 }
 .burger-bar-content li{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     list-style: none;
 }
 .burger-bar-content li:first-child{
