@@ -208,7 +208,7 @@ table.services-price-inside-table tr:last-child{
 .sale-item{
     background-size: cover;
     margin-bottom: 30px;
-    height: 400px;
+    min-height: 400px;
     display: flex;    
     flex-direction: column;
     justify-content: end;
@@ -222,6 +222,7 @@ table.services-price-inside-table tr:last-child{
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 10px;
     width: 100%;
+    height: auto;
 }
 .sale-info p{
     color: rgb(255, 255, 255);
@@ -259,16 +260,16 @@ table.services-price-inside-table tr:last-child{
 .sale-item-2{
     background-image: url('../assets/img/sale4.jpg');
 }
+.sale-item-3{
+    background-image: url('../assets/img/sale6.jpg');
+}
 @media (min-width: 768px) {
     .sale-info{
         padding: 10px 40px;
-        min-height: 150px;
+        height: auto;
     }  
 }
 @media (min-width: 1200px) {
-    .sale-info{
-        min-height: 100px;
-    }  
     .sale-item{
         width: 80%;
         margin: 0 auto 30px auto;
@@ -282,14 +283,8 @@ table.services-price-inside-table tr:last-child{
     }
     .sale-item{
         width: 45%;
-    }
-    .sale-info{
-        min-height: 200px;
-    } 
-}
-@media (max-width: 400px){
-    .sale-item{
         height: auto;
+        margin: 0 10px ;
     }
 }
 
