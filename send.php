@@ -2,8 +2,8 @@
 use PHPMailer\PHPMailer\PHPMailer;   //Подключаем файлы плагина
 use PHPMailer\PHPMailer\Exception;   //Подключаем файлы плагина
 
-require '/var/www/u130317/data/www/don-dragon.ru/PHPMailer/src/Exception.php';   //Путь к файлу плагина
-require '/var/www/u130317/data/www/don-dragon.ru/PHPMailer/src/PHPMailer.php';   //Путь к файлу плагина
+require '/var/www/u138911/data/www/техпрофи-нн.рф/PHPMailer/src/Exception.php';   //Путь к файлу плагина
+require '/var/www/u138911/data/www/техпрофи-нн.рф/PHPMailer/src/PHPMailer.php';   //Путь к файлу плагина
 
 $mail = new PHPMailer(true);  //Объявляем плагин
 $mail->CharSet = 'UTF-8';    //Указываем кодировку
@@ -12,7 +12,7 @@ $mail->IsHTML(true);    //Подключает возможность HTML те�
 
 #$mail->setFrom('avtoservis@техпрофи-нн.рф');     //От кого
 $mail->setFrom('avtoservis@техпрофи-нн.рф'); 
-$mail->addAddress('gorelikovavn@gmail.com');    //Куда отправить
+$mail->addAddress('Burberru7@mail.ru');    //Куда отправить
 $mail->Subject = 'Новое обращение с сайта';    //Тема письма
 
 //Тело письма
