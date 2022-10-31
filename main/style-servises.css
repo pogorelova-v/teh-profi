@@ -56,13 +56,17 @@ h5, h6,
 .reasons ul,
 .reasons p,
 .service-dop{    
-    background-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
+}
+.services-price span{
+    font-weight: 600;
 }
 .service-dop-slogan{
     text-align: center;
 }
-.service-dop span{
+.service-dop span,
+.reasons span{
     font-weight: 700;
 }
 .dn{
