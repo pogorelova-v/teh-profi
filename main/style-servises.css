@@ -263,6 +263,10 @@ table.services-price-inside-table tr:last-child{
 .sale-item-3{
     background-image: url('../assets/img/sale6.jpg');
 }
+.sale-button-formPopup{
+    width: 0;
+    height: 0;
+}
 @media (min-width: 768px) {
     .sale-info{
         padding: 10px 40px;
