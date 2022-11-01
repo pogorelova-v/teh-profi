@@ -11,8 +11,8 @@ $mail->setLanguage('ru', 'phpmailer/language/');    //Язык для уведо
 $mail->IsHTML(true);    //Подключает возможность HTML тегов в письме
 
 #$mail->setFrom('avtoservis@техпрофи-нн.рф');     //От кого
-$mail->setFrom('avtoservis@техпрофи-нн.рф'); 
-$mail->addAddress('Burberru7@mail.ru');    //Куда отправить
+$mail->setFrom('autoservice@tehprofi-nn.ru'); 
+$mail->addAddress('autoservice@tehprofi-nn.ru');    //Куда отправить
 $mail->Subject = 'Новое обращение с сайта';    //Тема письма
 
 //Тело письма
