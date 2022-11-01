@@ -138,6 +138,7 @@ table.services-price-inside-table tr:last-child{
 }
 .service-gallery{
     margin-bottom: 50px;
+    margin-top: 30px;
 }
 .waiting-you-wrapper{
     margin-top: 50px;
@@ -314,4 +315,7 @@ table.services-price-inside-table tr:last-child{
     text-align: center;
     font-weight: 500;
     font-size: 18px;
+}
+.advantages-btn-form{
+    display: none;
 }

@@ -587,17 +587,14 @@ footer{
     height: 350px;
 }
 
-.autor{
-    display: flex;
-    justify-content: end;
-    padding-right: 10px;
-    font-size: 12px;
-}
 .autor a{
     color: white;
     font-weight: 100;
-    font-style: 14px;
     text-decoration: none;
+    font-size: 12px;
+    padding-right: 10px;
+    display: block;
+    text-align: end;
 }
 .autor a:hover{
     color: red;
@@ -773,10 +770,6 @@ footer{
 }
 .footer-social a:last-child{
     margin-right: 0;
-}
-
-.autor{
-    font-size: 14px;
 }
 
 }
